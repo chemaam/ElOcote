@@ -7,7 +7,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import { services } from '../data/mock';
 
 const iconMap = {
-  saw: Saw,
+  scissors: Scissors,
   'clipboard-check': ClipboardCheck,
   wind: Wind,
   package: Package,
