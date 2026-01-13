@@ -166,7 +166,7 @@ const BlogPost = () => {
             </Button>
           </Link>
         </div>
-      </article>
+      </div>
     </div>
   );
 };
