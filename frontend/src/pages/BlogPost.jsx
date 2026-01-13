@@ -94,6 +94,7 @@ const BlogPost = () => {
                 color: '#4a5568'
               }}
             />
+          </div>
         </article>
 
         {/* CTA Card */}
