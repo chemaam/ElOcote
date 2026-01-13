@@ -183,7 +183,7 @@ export const services = [
     id: 1,
     title: 'Aserrío y cortes a medida',
     description: 'Cortamos madera de pino según tus especificaciones exactas con equipos modernos y precisos.',
-    icon: 'saw'
+    icon: 'scissors'
   },
   {
     id: 2,
