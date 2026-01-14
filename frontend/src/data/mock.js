@@ -28,94 +28,124 @@ export const businessInfo = {
   }
 };
 
-export const productCategories = [
-  {
-    id: 'empaque-embalajes',
-    name: 'Madera para empaque y embalajes',
-    slug: 'empaque-embalajes',
-    shortDescription: 'Cortes consistentes, humedad controlada, ideal para embalaje industrial.',
-    description: 'Madera de pino para cajas, embalaje industrial y protección de mercancía.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800',
-    features: [
-      'Cortes consistentes y precisos',
-      'Humedad controlada para mayor durabilidad',
-      'Ideal para embalaje industrial',
-      'Disponible en múltiples dimensiones'
-    ],
-    classes: ['2&M', '#3', '#4', '#5'],
-    applications: ['Cajas de madera', 'Embalaje industrial', 'Protección de mercancía', 'Contenedores'],
-    dimensions: {
-      thickness: ['7/8"', '6/4"', '1.5"'],
-      width: ['4"', '6"', '8"', '10"', '12"'],
-      length: ['2-20 pies']
-    },
-    conditions: ['Verde', 'Seca al aire', 'Estufada', 'Enfajillada']
-  },
-  {
-    id: 'tarima',
-    name: 'Madera para tarima',
-    slug: 'tarima',
-    shortDescription: 'Cumple NIMF-15, dimensiones estándar, alta disponibilidad.',
-    description: 'Madera especializada para pallets y tarimas, cumple con normativas de exportación.',
-    image: 'https://images.unsplash.com/photo-1565174066-4f83c8c4854b?w=800',
-    features: [
-      'Cumple normativa NIMF-15/ISPM-15',
-      'Dimensiones estándar para tarimas',
-      'Alta disponibilidad en stock',
-      'Preparada para exportación'
-    ],
-    classes: ['#3', '#4', '#5'],
-    applications: ['Tarimas para exportación', 'Pallets industriales', 'Bases para carga', 'Embalaje pesado'],
-    dimensions: {
-      thickness: ['3/4"', '7/8"', '1"'],
-      width: ['3.5"', '5.5"', '7.25"'],
-      length: ['40-48 pulgadas (estándar)']
-    },
-    conditions: ['Verde', 'Seca al aire', 'Tratamiento térmico (HT)']
-  },
+// Nueva estructura de productos con TABS
+export const productTabs = [
   {
     id: 'construccion',
-    name: 'Madera para construcción',
-    slug: 'construccion',
-    shortDescription: 'Vigas y tablas estructurales en grados adecuados.',
-    description: 'Madera estructural para encofrados, bastidores, techumbres y obra civil.',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
-    features: [
-      'Grados estructurales certificados',
-      'Resistencia para aplicaciones de construcción',
-      'Vigas y tablas disponibles',
-      'Cumple especificaciones técnicas'
-    ],
-    classes: ['2&M', '#3'],
-    applications: ['Encofrados', 'Bastidores', 'Techumbres ligeras', 'Obra civil ligera', 'Estructuras temporales'],
-    dimensions: {
-      thickness: ['1.5"', '2"', '3"'],
-      width: ['4"', '6"', '8"', '10"', '12"'],
-      length: ['8-20 pies']
-    },
-    conditions: ['Verde', 'Seca al aire', 'Estufada']
+    name: 'Construcción',
+    intro: 'Soluciones en madera para obra y procesos constructivos.',
+    products: [
+      {
+        title: 'Puntales de madera',
+        description: 'Elementos de soporte temporal utilizados en obra para apuntalamientos estructurales, nivelación y soporte durante el colado de losas y estructuras.',
+        uses: ['Apuntalamiento', 'Soporte de cimbras', 'Refuerzo temporal en obra']
+      },
+      {
+        title: 'Tablas',
+        description: 'Madera aserrada para múltiples aplicaciones de construcción: ideal para cimbras, cerramientos temporales y trabajos generales de obra.',
+        uses: ['Cimbra tradicional', 'Cerramientos', 'Obra negra']
+      },
+      {
+        title: 'Vigas',
+        description: 'Piezas de mayor sección diseñadas para soportar cargas estructurales en procesos constructivos y de montaje.',
+        uses: ['Soporte estructural', 'Marcos y refuerzos', 'Apoyos de carga']
+      },
+      {
+        title: 'Tablones',
+        description: 'Madera robusta y resistente para superficies de trabajo y aplicaciones que requieren mayor durabilidad.',
+        uses: ['Andamios', 'Plataformas', 'Pisos provisionales de obra']
+      },
+      {
+        title: 'Triplay',
+        description: 'Tablero de capas de madera prensadas para construcción, cimbra y acabados funcionales.',
+        uses: ['Cimbra', 'Cubiertas temporales', 'Protección de superficies'],
+        specs: 'Medidas: 18 mm y 19 mm'
+      }
+    ]
   },
   {
-    id: 'muebleria',
-    name: 'Madera para mueblería',
-    slug: 'muebleria',
-    shortDescription: 'Selección con mejor apariencia, control de nudos, acabado fino.',
-    description: 'Madera seleccionada para muebles, carpintería fina e interiores.',
-    image: 'https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=800',
-    features: [
-      'Mejor apariencia y vetas',
-      'Control estricto de nudos',
-      'Acabado fino y suave',
-      'Ideal para trabajo detallado'
-    ],
-    classes: ['2&M', '#3'],
-    applications: ['Muebles', 'Carpintería fina', 'Interiores', 'Decoración', 'Ebanistería'],
-    dimensions: {
-      thickness: ['3/4"', '1"', '1.5"', '2"'],
-      width: ['4"', '6"', '8"', '10"', '12"'],
-      length: ['6-16 pies']
-    },
-    conditions: ['Seca al aire', 'Estufada (recomendado)']
+    id: 'carpinteria',
+    name: 'Carpintería',
+    intro: 'Materiales y servicios para trabajos de precisión.',
+    products: [
+      {
+        title: 'Madera selecta estufada',
+        description: 'Madera seca en estufa, seleccionada para estabilidad, menor humedad y mejor desempeño en carpintería.',
+        uses: ['Muebles', 'Puertas', 'Trabajos finos'],
+        availability: 'Sujeto a disponibilidad. Consultar existencias.'
+      },
+      {
+        title: 'Servicio de cepillado',
+        description: 'Maquinado para superficies lisas y medidas uniformes.',
+        uses: []
+      },
+      {
+        title: 'Cortes longitudinales y transversales',
+        description: 'Dimensionado a la medida del proyecto.',
+        uses: []
+      },
+      {
+        title: 'MDF',
+        description: 'Tablero de fibra de densidad media para mobiliario, interiores y aplicaciones decorativas.',
+        uses: [],
+        specs: 'Medidas: 2.5 mm, 3 mm, 6 mm, 9 mm y 12 mm'
+      }
+    ]
+  },
+  {
+    id: 'industria',
+    name: 'Industria',
+    intro: 'Madera para aplicaciones industriales y de alto desgaste.',
+    products: [
+      {
+        title: 'Tablas de pino clase selecta',
+        description: 'Para usos donde se requiere mejor acabado y resistencia.',
+        uses: []
+      },
+      {
+        title: 'Tablas de pino de segunda',
+        description: 'Opción funcional y económica donde la estética no es prioritaria.',
+        uses: []
+      },
+      {
+        title: 'Pisos de plataformas y remolques',
+        description: 'Madera para pisos de plataformas de carga, cajas secas y remolques.',
+        uses: []
+      },
+      {
+        title: 'Fabricación de cajas para camionetas de estacas',
+        description: 'Para construcción y rehabilitación de cajas de carga.',
+        uses: []
+      }
+    ]
+  },
+  {
+    id: 'tarimas',
+    name: 'Tarimas y Huacales',
+    intro: 'Soluciones de empaque y transporte.',
+    legalNotice: 'No contamos con sello HT para exportación.',
+    products: [
+      {
+        title: 'Madera para tarimas',
+        description: 'Material para fabricación de tarimas según medidas/necesidades.',
+        uses: []
+      },
+      {
+        title: 'Barrote',
+        description: 'Elemento estructural para soporte en tarimas, huacales y embalajes.',
+        uses: []
+      },
+      {
+        title: 'Tableta',
+        description: 'Madera delgada usada como cubierta superior en tarimas y embalajes.',
+        uses: []
+      },
+      {
+        title: 'Tarimas armadas',
+        description: 'Tarimas listas para logística y almacenamiento.',
+        uses: []
+      }
+    ]
   }
 ];
 
