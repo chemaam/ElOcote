@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { MessageCircle, AlertCircle } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
+import { Alert, AlertDescription } from '../components/ui/alert';
 import Breadcrumbs from '../components/Breadcrumbs';
-import { productCategories } from '../data/mock';
+import { productTabs, businessInfo } from '../data/mock';
 
 const Productos = () => {
+  const handleWhatsAppClick = () => {
+    const message = 'Hola, me gustaría solicitar una cotización de productos.';
+    window.open(`${businessInfo.whatsapp}?text=${encodeURIComponent(message)}`, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
@@ -17,85 +24,131 @@ const Productos = () => {
             Nuestros productos
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
-            Madera de pino clasificada por grado y lista para tu proyecto. Desde embalaje industrial hasta mueblería fina.
+            Madera para construcción, carpintería, industria y tarimas. Selecciona la categoría para ver los detalles.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {productCategories.map((category) => (
-            <Card key={category.id} className="group hover:shadow-2xl transition-all duration-300 border-2 hover:border-[#2A5C2A]">
-              <CardContent className="p-0">
-                <div className="aspect-[16/9] overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-8 space-y-6">
-                  <div>
-                    <h2 className="text-2xl font-bold text-[#333333] mb-3 group-hover:text-[#2A5C2A] transition-colors duration-200">
-                      {category.name}
-                    </h2>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      {category.description}
-                    </p>
-                  </div>
+        {/* Tabs de productos */}
+        <Tabs defaultValue="construccion" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 h-auto gap-2 bg-gray-100 p-2 rounded-lg mb-8">
+            {productTabs.map((tab) => (
+              <TabsTrigger
+                key={tab.id}
+                value={tab.id}
+                className="data-[state=active]:bg-[#2A5C2A] data-[state=active]:text-white text-sm md:text-base py-3 rounded-md transition-all duration-200"
+              >
+                {tab.name}
+              </TabsTrigger>
+            ))}
+          </TabsList>
 
-                  <div>
-                    <h3 className="font-semibold text-[#333333] mb-3">Características principales:</h3>
-                    <ul className="space-y-2">
-                      {category.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start space-x-2 text-gray-600">
-                          <span className="text-[#2A5C2A] mt-1.5">•</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          {productTabs.map((tab) => (
+            <TabsContent key={tab.id} value={tab.id} className="space-y-8">
+              {/* Intro del tab */}
+              <div className="bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0] p-6 rounded-lg">
+                <p className="text-lg text-gray-700">{tab.intro}</p>
+              </div>
 
-                  <div>
-                    <p className="text-sm text-gray-500 mb-2">
-                      <span className="font-semibold text-[#333333]">Clases disponibles:</span> {category.classes.join(', ')}
-                    </p>
-                  </div>
+              {/* Aviso legal para Tarimas */}
+              {tab.legalNotice && (
+                <Alert className="border-2 border-amber-500 bg-amber-50">
+                  <AlertCircle className="h-5 w-5 text-amber-600" />
+                  <AlertDescription className="text-amber-900 font-medium">
+                    {tab.legalNotice}
+                  </AlertDescription>
+                </Alert>
+              )}
 
-                  <div className="flex gap-3 pt-4">
-                    <Link to={`/productos/${category.slug}`} className="flex-1">
-                      <Button className="w-full bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white">
-                        Ver detalles completos
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Button>
-                    </Link>
-                    <Link to="/cotizar">
-                      <Button variant="outline" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
-                        Cotizar
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              {/* Grid de productos */}
+              <div className="grid md:grid-cols-2 gap-6">
+                {tab.products.map((product, index) => (
+                  <Card key={index} className="border-2 hover:border-[#2A5C2A] transition-colors duration-300">
+                    <CardContent className="p-6 space-y-4">
+                      <div>
+                        <h3 className="text-xl font-bold text-[#333333] mb-3">
+                          {product.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed mb-4">
+                          {product.description}
+                        </p>
+                      </div>
+
+                      {/* Usos comunes */}
+                      {product.uses && product.uses.length > 0 && (
+                        <div>
+                          <h4 className="font-semibold text-[#2A5C2A] text-sm mb-2">Usos comunes:</h4>
+                          <ul className="space-y-1">
+                            {product.uses.map((use, idx) => (
+                              <li key={idx} className="text-sm text-gray-600 flex items-start space-x-2">
+                                <span className="text-[#2A5C2A] mt-1">•</span>
+                                <span>{use}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {/* Especificaciones */}
+                      {product.specs && (
+                        <div className="bg-[#f8f9f8] p-3 rounded-md">
+                          <p className="text-sm text-gray-700">{product.specs}</p>
+                        </div>
+                      )}
+
+                      {/* Aviso de disponibilidad */}
+                      {product.availability && (
+                        <div className="bg-amber-50 border border-amber-200 p-3 rounded-md">
+                          <p className="text-xs text-amber-900 font-medium">{product.availability}</p>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* CTA por tab */}
+              <Card className="bg-[#2A5C2A] border-none mt-8">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    ¿Interesado en estos productos?
+                  </h3>
+                  <p className="text-white/90 mb-6">
+                    Solicita una cotización personalizada por WhatsApp
+                  </p>
+                  <Button
+                    size="lg"
+                    onClick={handleWhatsAppClick}
+                    className="bg-white text-[#2A5C2A] hover:bg-gray-100"
+                  >
+                    <MessageCircle className="mr-2 w-5 h-5" />
+                    Cotizar por WhatsApp
+                  </Button>
+                </CardContent>
+              </Card>
+            </TabsContent>
           ))}
-        </div>
+        </Tabs>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA general */}
         <div className="mt-20 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0] rounded-2xl p-12 text-center">
           <h2 className="text-3xl font-bold text-[#333333] mb-4">
-            ¿No estás seguro qué producto necesitas?
+            ¿No encuentras lo que buscas?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Nuestro equipo puede asesorarte para elegir el grado y dimensiones correctas para tu proyecto
+            Contáctanos y con gusto te ayudamos a encontrar la solución ideal para tu proyecto
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              onClick={handleWhatsAppClick}
+              className="bg-[#25D366] hover:bg-[#20BA5A] text-white"
+            >
+              <MessageCircle className="mr-2 w-5 h-5" />
+              Contactar por WhatsApp
+            </Button>
             <Link to="/contacto">
-              <Button size="lg" className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white">
-                Contactar un asesor
-              </Button>
-            </Link>
-            <Link to="/calidades">
               <Button size="lg" variant="outline" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
-                Ver guía de calidades
+                Ir a Contacto
               </Button>
             </Link>
           </div>
