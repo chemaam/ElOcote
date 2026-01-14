@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Scissors, ClipboardCheck, Wind, Package, Truck, UserCheck, Clock, MapPin } from 'lucide-react';
+import { Scissors, ClipboardCheck, Package, Truck, MessageCircle } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import Breadcrumbs from '../components/Breadcrumbs';
-import { services } from '../data/mock';
+import { services, businessInfo } from '../data/mock';
 
 const iconMap = {
   scissors: Scissors,
   'clipboard-check': ClipboardCheck,
-  wind: Wind,
   package: Package,
-  truck: Truck,
-  'user-check': UserCheck
+  truck: Truck
 };
 
 const Servicios = () => {
+  const handleWhatsAppClick = () => {
+    window.open(businessInfo.whatsapp, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
@@ -26,7 +28,7 @@ const Servicios = () => {
             Nuestros servicios
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
-            Del aserradero a tu proyecto. Servicios integrales de aserrío, clasificación, secado y logística.
+            Servicios de corte, preparación y entrega para facilitar tu operación.
           </p>
         </div>
 
