@@ -54,7 +54,36 @@ const Servicios = () => {
           })}
         </div>
 
-        {/* Timeline Section */}
+        {/* CTA Section */}
+        <section className="bg-[#2A5C2A] rounded-2xl p-12 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            ¿Necesitas alguno de estos servicios?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Contáctanos y con gusto te ayudamos con tu proyecto
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              onClick={handleWhatsAppClick}
+              className="bg-white text-[#2A5C2A] hover:bg-gray-100 w-full sm:w-auto"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Cotizar por WhatsApp
+            </Button>
+            <Link to="/contacto">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#2A5C2A] w-full sm:w-auto">
+                Contactar
+              </Button>
+            </Link>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default Servicios;
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-[#333333] mb-12 text-center">
             Del aserradero a tu proyecto
