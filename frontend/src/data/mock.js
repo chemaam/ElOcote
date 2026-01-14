@@ -394,17 +394,17 @@ export const faqs = [
   {
     id: 1,
     question: '¿Cuál es el pedido mínimo?',
-    answer: 'El pedido mínimo varía según el producto y disponibilidad. Para tarimas y embalaje típicamente es de 500 pies-tabla. Contáctanos para pedidos especiales.'
+    answer: 'El pedido mínimo varía según el producto y disponibilidad. Contáctanos por WhatsApp para conocer los detalles de tu pedido específico.'
   },
   {
     id: 2,
     question: '¿Cuánto tiempo tardan las entregas?',
-    answer: 'En La Laguna (Torreón, Gómez Palacio, Lerdo) entregamos en 3-5 días hábiles. Para pedidos especiales o fuera de la región, el plazo puede variar según disponibilidad y especificaciones.'
+    answer: 'Los tiempos de entrega dependen de la disponibilidad y el volumen del pedido. Generalmente entregamos en 3-5 días hábiles en la zona de La Laguna. Te confirmamos el plazo al momento de cotizar.'
   },
   {
     id: 3,
     question: '¿Qué métodos de pago aceptan?',
-    answer: 'Aceptamos transferencia bancaria, depósito en efectivo y cheques de empresa. Para clientes frecuentes ofrecemos crédito con referencias comerciales.'
+    answer: 'Aceptamos transferencia bancaria, depósito en efectivo y cheques. Para clientes frecuentes ofrecemos facilidades de pago.'
   },
   {
     id: 4,
@@ -413,22 +413,17 @@ export const faqs = [
   },
   {
     id: 5,
-    question: '¿La madera está certificada?',
-    answer: 'Nuestra madera proviene de fuentes legales y sustentables. Ofrecemos tratamiento térmico certificado NIMF-15 para exportación.'
+    question: '¿Hacen cortes especiales?',
+    answer: 'Sí, ofrecemos servicio de cortes a medida, cepillado y cortes longitudinales y transversales según tus especificaciones.'
   },
   {
     id: 6,
-    question: '¿Hacen cortes especiales?',
-    answer: 'Sí, ofrecemos aserrío a medida según tus especificaciones. Los cortes especiales pueden tener un tiempo de entrega mayor.'
+    question: '¿Entregan fuera de Torreón?',
+    answer: 'Realizamos entregas coordinadas en Torreón, Gómez Palacio, Lerdo y zonas cercanas. Para otras ubicaciones, consúltanos.'
   },
   {
     id: 7,
-    question: '¿Entregan fuera de La Laguna?',
-    answer: 'Sí, realizamos entregas en todo el norte de México. El costo y tiempo de entrega dependen de la ubicación y volumen del pedido.'
-  },
-  {
-    id: 8,
-    question: '¿Cómo sé qué grado necesito?',
-    answer: 'Depende de tu aplicación. Para muebles finos: 2&M o #3. Para construcción: #3. Para tarimas: #3, #4 o #5. Ofrecemos asesoría gratuita para ayudarte a elegir.'
+    question: '¿Tienen madera con tratamiento térmico (HT)?',
+    answer: 'No contamos con sello HT para exportación. Nuestra madera es ideal para uso nacional en construcción, carpintería e industria.'
   }
 ];
