@@ -62,45 +62,56 @@ const Productos = () => {
               {/* Grid de productos */}
               <div className="grid md:grid-cols-2 gap-6">
                 {tab.products.map((product, index) => (
-                  <Card key={index} className="border-2 hover:border-[#2A5C2A] transition-colors duration-300">
-                    <CardContent className="p-6 space-y-4">
-                      <div>
-                        <h3 className="text-xl font-bold text-[#333333] mb-3">
-                          {product.title}
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                          {product.description}
-                        </p>
-                      </div>
-
-                      {/* Usos comunes */}
-                      {product.uses && product.uses.length > 0 && (
+                  <Card key={index} className="border-2 hover:border-[#2A5C2A] transition-colors duration-300 overflow-hidden">
+                    <CardContent className="p-6 space-y-4 relative">
+                      {/* Imagen de fondo con opacidad */}
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
+                        style={{
+                          backgroundImage: 'url(https://customer-assets.emergentagent.com/job_72e09283-43db-4641-b5ee-4dc83dfcd7b6/artifacts/wvuxexzc_foto_3_polines_cuadrados.png)'
+                        }}
+                      />
+                      
+                      {/* Contenido sobre la imagen */}
+                      <div className="relative z-10">
                         <div>
-                          <h4 className="font-semibold text-[#2A5C2A] text-sm mb-2">Usos comunes:</h4>
-                          <ul className="space-y-1">
-                            {product.uses.map((use, idx) => (
-                              <li key={idx} className="text-sm text-gray-600 flex items-start space-x-2">
-                                <span className="text-[#2A5C2A] mt-1">•</span>
-                                <span>{use}</span>
-                              </li>
-                            ))}
-                          </ul>
+                          <h3 className="text-xl font-bold text-[#333333] mb-3">
+                            {product.title}
+                          </h3>
+                          <p className="text-gray-600 leading-relaxed mb-4">
+                            {product.description}
+                          </p>
                         </div>
-                      )}
 
-                      {/* Especificaciones */}
-                      {product.specs && (
-                        <div className="bg-[#f8f9f8] p-3 rounded-md">
-                          <p className="text-sm text-gray-700">{product.specs}</p>
-                        </div>
-                      )}
+                        {/* Usos comunes */}
+                        {product.uses && product.uses.length > 0 && (
+                          <div>
+                            <h4 className="font-semibold text-[#2A5C2A] text-sm mb-2">Usos comunes:</h4>
+                            <ul className="space-y-1">
+                              {product.uses.map((use, idx) => (
+                                <li key={idx} className="text-sm text-gray-600 flex items-start space-x-2">
+                                  <span className="text-[#2A5C2A] mt-1">•</span>
+                                  <span>{use}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
 
-                      {/* Aviso de disponibilidad */}
-                      {product.availability && (
-                        <div className="bg-amber-50 border border-amber-200 p-3 rounded-md">
-                          <p className="text-xs text-amber-900 font-medium">{product.availability}</p>
-                        </div>
-                      )}
+                        {/* Especificaciones */}
+                        {product.specs && (
+                          <div className="bg-[#f8f9f8] p-3 rounded-md">
+                            <p className="text-sm text-gray-700">{product.specs}</p>
+                          </div>
+                        )}
+
+                        {/* Aviso de disponibilidad */}
+                        {product.availability && (
+                          <div className="bg-amber-50 border border-amber-200 p-3 rounded-md">
+                            <p className="text-xs text-amber-900 font-medium">{product.availability}</p>
+                          </div>
+                        )}
+                      </div>
                     </CardContent>
                   </Card>
                 ))}
