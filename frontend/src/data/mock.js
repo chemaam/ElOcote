@@ -149,65 +149,6 @@ export const productTabs = [
   }
 ];
 
-export const woodGrades = [
-  {
-    grade: '2&M',
-    name: '2 y mejor (2&M)',
-    quality: 'Premium',
-    description: 'La más alta calidad. Nudos pequeños y limitados, excelente apariencia.',
-    characteristics: [
-      'Nudos pequeños (máximo 1/2")',
-      'Mínimas imperfecciones',
-      'Excelente para acabados visibles',
-      'Vetas uniformes y atractivas'
-    ],
-    idealFor: ['Mueblería fina', 'Acabados interiores', 'Proyectos visibles', 'Carpintería de alta calidad'],
-    price: 'Premium'
-  },
-  {
-    grade: '#3',
-    name: 'Grado #3',
-    quality: 'Estándar Alto',
-    description: 'Buena calidad con nudos controlados. Balance entre apariencia y costo.',
-    characteristics: [
-      'Nudos medianos permitidos',
-      'Buena resistencia estructural',
-      'Apariencia aceptable',
-      'Versátil para múltiples usos'
-    ],
-    idealFor: ['Construcción ligera', 'Muebles estándar', 'Tarimas de calidad', 'Embalaje premium'],
-    price: 'Medio-alto'
-  },
-  {
-    grade: '#4',
-    name: 'Grado #4',
-    quality: 'Estándar',
-    description: 'Calidad económica. Nudos más grandes, ideal para aplicaciones estructurales no visibles.',
-    characteristics: [
-      'Nudos grandes permitidos',
-      'Algunas imperfecciones visuales',
-      'Buena resistencia básica',
-      'Económico y funcional'
-    ],
-    idealFor: ['Tarimas industriales', 'Embalaje estándar', 'Encofrados', 'Usos no visibles'],
-    price: 'Económico'
-  },
-  {
-    grade: '#5',
-    name: 'Grado #5',
-    quality: 'Económico',
-    description: 'Calidad de utilidad. Para aplicaciones donde la apariencia no es importante.',
-    characteristics: [
-      'Nudos grandes y múltiples',
-      'Imperfecciones visuales',
-      'Funcionalidad básica',
-      'Máxima economía'
-    ],
-    idealFor: ['Tarimas de un solo uso', 'Embalaje económico', 'Bases y soportes', 'Aplicaciones temporales'],
-    price: 'Muy económico'
-  }
-];
-
 export const services = [
   {
     id: 1,
