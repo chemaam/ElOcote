@@ -39,13 +39,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-[#2A5C2A] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">EO</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[#333333] font-bold text-lg leading-tight">Maderas</span>
-              <span className="text-[#2A5C2A] font-bold text-lg leading-tight">El Ocote</span>
-            </div>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_72e09283-43db-4641-b5ee-4dc83dfcd7b6/artifacts/z2i2wjrh_Logo.png"
+              alt="Maderas El Ocote"
+              className="h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
