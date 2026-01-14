@@ -52,8 +52,8 @@ const Header = () => {
                 to={link.path}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   location.pathname === link.path
-                    ? 'text-[#2A5C2A]'
-                    : 'text-[#333333] hover:text-[#2A5C2A]'
+                    ? 'text-[#C48F3A]'
+                    : 'text-gray-300 hover:text-[#C48F3A]'
                 }`}
               >
                 {link.name}
@@ -67,7 +67,7 @@ const Header = () => {
               variant="outline"
               size="sm"
               onClick={handleWhatsAppClick}
-              className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white transition-colors duration-200"
+              className="border-[#C48F3A] text-[#C48F3A] hover:bg-[#C48F3A] hover:text-white transition-colors duration-200"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp
@@ -85,7 +85,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-[#333333] hover:bg-gray-100 transition-colors duration-200"
+            className="lg:hidden p-2 rounded-md text-white hover:bg-gray-700 transition-colors duration-200"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
