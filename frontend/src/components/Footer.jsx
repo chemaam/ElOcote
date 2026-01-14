@@ -13,13 +13,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-[#2A5C2A] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">EO</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-base leading-tight">Maderas</span>
-                <span className="text-[#C48F3A] font-bold text-base leading-tight">El Ocote</span>
-              </div>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_72e09283-43db-4641-b5ee-4dc83dfcd7b6/artifacts/z2i2wjrh_Logo.png"
+                alt="Maderas El Ocote"
+                className="h-12 w-auto object-contain"
+              />
             </div>
             <p className="text-gray-400 text-sm mb-4">
               Calidad de pino, tiempos confiables. Aserradero en Torreón, Coahuila.
