@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, Calculator } from 'lucide-react';
+import { ArrowRight, Check, MessageCircle } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
-import { productCategories, testimonials, businessInfo } from '../data/mock';
+import { testimonials, businessInfo } from '../data/mock';
 
 const Home = () => {
   const handleWhatsAppClick = () => {
@@ -19,45 +19,31 @@ const Home = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#333333] leading-tight">
-                  Calidad de pino, tiempos confiables.
+                  Madera de calidad. Respuesta rápida.
                 </h1>
                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                  Serramos, clasificamos y entregamos madera de pino en Torreón, Coahuila y la región norte de México.
+                  Soluciones en madera para construcción, carpintería e industria.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/cotizar">
-                  <Button size="lg" className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white w-full sm:w-auto">
-                    Cotizar ahora
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </Link>
+                <Button 
+                  size="lg" 
+                  onClick={handleWhatsAppClick}
+                  className="bg-[#25D366] hover:bg-[#20BA5A] text-white w-full sm:w-auto"
+                >
+                  <MessageCircle className="mr-2 w-5 h-5" />
+                  Cotizar por WhatsApp
+                </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  onClick={handleWhatsAppClick}
+                  onClick={() => document.getElementById('productos')?.scrollIntoView({ behavior: 'smooth' })}
                   className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white w-full sm:w-auto"
                 >
-                  Escríbenos por WhatsApp
+                  Ver Productos
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-              </div>
-
-              {/* Trust Badges */}
-              <div className="grid grid-cols-2 gap-4 pt-8">
-                {[
-                  { icon: Check, text: 'Procedencia legal' },
-                  { icon: Check, text: 'Prácticas sostenibles' },
-                  { icon: Check, text: 'Libre de plagas' },
-                  { icon: Check, text: 'Entrega confiable' }
-                ].map((badge, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <div className="w-6 h-6 rounded-full bg-[#2A5C2A] flex items-center justify-center flex-shrink-0">
-                      <badge.icon className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="text-sm font-medium text-gray-700">{badge.text}</span>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -66,123 +52,124 @@ const Home = () => {
               <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?w=800"
-                  alt="Aserradero El Ocote"
+                  alt="Maderas El Ocote"
                   className="w-full h-full object-cover"
                 />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
-                <p className="text-[#C48F3A] font-bold text-3xl">15+</p>
-                <p className="text-gray-600 text-sm">Años de experiencia</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Product Categories */}
+      {/* Misión y Visión */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12">
+            <Card className="border-2 border-[#2A5C2A]/20">
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold text-[#2A5C2A] mb-4">Misión</h2>
+                <p className="text-gray-700 leading-relaxed">
+                  Ofrecer madera de calidad para construcción, carpintería e industria, brindando soluciones confiables, atención cercana y tiempos de respuesta eficientes que se adapten a las necesidades de cada cliente.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-[#2A5C2A]/20">
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold text-[#2A5C2A] mb-4">Visión</h2>
+                <p className="text-gray-700 leading-relaxed">
+                  Consolidarnos como una empresa maderera de referencia en el mercado, reconocida por la calidad de nuestros productos, la flexibilidad en nuestras soluciones y la confianza que generamos con cada cliente.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Valores Grid */}
+      <section className="py-20 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#333333]">
+              ¿Por qué elegirnos?
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Calidad y respuesta',
+                description: 'Atención cercana y tiempos eficientes.'
+              },
+              {
+                title: 'Flexibilidad',
+                description: 'Medidas y soluciones según la necesidad.'
+              },
+              {
+                title: 'Cobertura',
+                description: 'Entregas locales/zonales bajo coordinación.'
+              }
+            ].map((item, index) => (
+              <Card key={index} className="border-2 hover:border-[#2A5C2A] transition-colors duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-[#2A5C2A] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Check className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#333333] mb-3">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Anchor para scroll desde hero */}
+      <div id="productos"></div>
+
+      {/* Quick Products Preview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-4">
-              Nuestros productos
+              Nuestras categorías
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Madera de pino clasificada por grado para cada aplicación
+              Soluciones en madera para diferentes aplicaciones
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {productCategories.map((category) => (
-              <Card key={category.id} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#2A5C2A]">
-                <CardContent className="p-0">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={category.image}
-                      alt={category.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6 space-y-4">
-                    <h3 className="text-xl font-bold text-[#333333] group-hover:text-[#2A5C2A] transition-colors duration-200">
-                      {category.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {category.shortDescription}
-                    </p>
-                    <ul className="space-y-2">
-                      {category.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="flex items-start space-x-2 text-sm text-gray-600">
-                          <Check className="w-4 h-4 text-[#2A5C2A] flex-shrink-0 mt-0.5" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link to={`/productos/${category.slug}`} className="block">
-                      <Button variant="ghost" className="w-full text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white group-hover:bg-[#2A5C2A] group-hover:text-white transition-colors duration-200">
-                        Ver detalles
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Button>
-                    </Link>
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {[
+              { name: 'Construcción', desc: 'Puntales, tablas, vigas, tablones y triplay' },
+              { name: 'Carpintería', desc: 'Madera selecta estufada, cepillado y MDF' },
+              { name: 'Industria', desc: 'Tablas selecta y segunda, pisos de plataformas' },
+              { name: 'Tarimas y Huacales', desc: 'Madera para tarimas, barrote y tableta' }
+            ].map((cat, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#2A5C2A]">
+                <CardContent className="p-6 text-center space-y-3">
+                  <h3 className="text-lg font-bold text-[#333333] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                    {cat.name}
+                  </h3>
+                  <p className="text-sm text-gray-600">{cat.desc}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center">
             <Link to="/productos">
-              <Button size="lg" variant="outline" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
+              <Button size="lg" className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white">
                 Ver todos los productos
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Mini Calculator Section */}
-      <section className="py-20 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-[#2A5C2A] rounded-full mb-4">
-              <Calculator className="w-8 h-8 text-white" />
-            </div>
-            <h2 className="text-3xl font-bold text-[#333333] mb-4">
-              Calcula tus pies-tabla
-            </h2>
-            <p className="text-gray-600">
-              Usa nuestra calculadora para estimar la cantidad de madera que necesitas
-            </p>
-          </div>
-
-          <Card className="shadow-lg">
-            <CardContent className="p-8">
-              <div className="bg-[#f8f9f8] p-6 rounded-lg">
-                <p className="text-center text-gray-600 mb-2">
-                  <span className="font-semibold text-[#2A5C2A]">Fórmula:</span>
-                </p>
-                <p className="text-center text-lg font-mono text-[#333333] mb-4">
-                  (Grosor × Ancho × Largo) ÷ 12
-                </p>
-                <p className="text-center text-sm text-gray-500">
-                  Grosor y ancho en pulgadas, largo en pies
-                </p>
-              </div>
-
-              <div className="mt-6 text-center">
-                <Link to="/cotizar">
-                  <Button size="lg" className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white">
-                    Usar calculadora completa
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* Testimonials */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-4">
@@ -221,23 +208,26 @@ const Home = () => {
             ¿Listo para tu próximo proyecto?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Contáctanos hoy y recibe una cotización personalizada
+            Contáctanos hoy y recibe atención personalizada
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/cotizar">
-              <Button size="lg" className="bg-white text-[#2A5C2A] hover:bg-gray-100 w-full sm:w-auto">
-                Solicitar cotización
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
             <Button
               size="lg"
-              variant="outline"
               onClick={handleWhatsAppClick}
-              className="border-2 border-white text-white hover:bg-white hover:text-[#2A5C2A] w-full sm:w-auto"
+              className="bg-white text-[#2A5C2A] hover:bg-gray-100 w-full sm:w-auto"
             >
-              WhatsApp
+              <MessageCircle className="mr-2 w-5 h-5" />
+              Cotizar por WhatsApp
             </Button>
+            <Link to="/contacto">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white hover:text-[#2A5C2A] w-full sm:w-auto"
+              >
+                Ir a Contacto
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
