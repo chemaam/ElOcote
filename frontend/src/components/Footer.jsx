@@ -120,21 +120,17 @@ const Footer = () => {
 
         {/* Trust Bar */}
         <div className="mt-12 pt-8 border-t border-gray-700">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
             <div>
-              <p className="text-[#C48F3A] font-semibold text-sm">Procedencia Legal</p>
-              <p className="text-gray-500 text-xs mt-1">Madera certificada</p>
+              <p className="text-[#C48F3A] font-semibold text-sm">Calidad</p>
+              <p className="text-gray-500 text-xs mt-1">Productos confiables</p>
             </div>
             <div>
-              <p className="text-[#C48F3A] font-semibold text-sm">Prácticas Sostenibles</p>
-              <p className="text-gray-500 text-xs mt-1">Manejo responsable</p>
+              <p className="text-[#C48F3A] font-semibold text-sm">Atención cercana</p>
+              <p className="text-gray-500 text-xs mt-1">Servicio personalizado</p>
             </div>
             <div>
-              <p className="text-[#C48F3A] font-semibold text-sm">Libre de Plagas</p>
-              <p className="text-gray-500 text-xs mt-1">Secado controlado</p>
-            </div>
-            <div>
-              <p className="text-[#C48F3A] font-semibold text-sm">Entrega Confiable</p>
+              <p className="text-[#C48F3A] font-semibold text-sm">Entrega coordinada</p>
               <p className="text-gray-500 text-xs mt-1">La Laguna y región</p>
             </div>
           </div>
