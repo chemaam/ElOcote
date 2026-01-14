@@ -211,39 +211,33 @@ export const woodGrades = [
 export const services = [
   {
     id: 1,
-    title: 'Aserrío y cortes a medida',
-    description: 'Cortamos madera de pino según tus especificaciones exactas con equipos modernos y precisos.',
+    title: 'Cortes a medida',
+    description: 'Dimensionado preciso de madera según las especificaciones de tu proyecto.',
     icon: 'scissors'
   },
   {
     id: 2,
-    title: 'Clasificación por grado',
-    description: 'Clasificamos cada pieza según estándares de la industria (2&M, #3, #4, #5) para garantizar calidad consistente.',
-    icon: 'clipboard-check'
-  },
-  {
-    id: 3,
-    title: 'Secado al aire y estufa',
-    description: 'Ofrecemos madera verde, secada al aire o en estufa según las necesidades de tu proyecto.',
-    icon: 'wind'
-  },
-  {
-    id: 4,
-    title: 'Preparación para tarimas',
-    description: 'Cortes especializados y tratamiento térmico NIMF-15 para tarimas de exportación.',
+    title: 'Cepillado',
+    description: 'Maquinado para superficies lisas y medidas uniformes, ideal para trabajos de carpintería.',
     icon: 'package'
   },
   {
-    id: 5,
-    title: 'Carga y despacho',
-    description: 'Logística confiable en Torreón, Gómez Palacio, Lerdo, San Pedro y alrededores en La Laguna.',
-    icon: 'truck'
+    id: 3,
+    title: 'Cortes longitudinales y transversales',
+    description: 'Servicio de corte en diferentes direcciones para adaptarnos a tus necesidades.',
+    icon: 'scissors'
   },
   {
-    id: 6,
-    title: 'Asesoría técnica',
-    description: 'Te ayudamos a seleccionar el grado, dimensiones y estado ideal para tu aplicación específica.',
-    icon: 'user-check'
+    id: 4,
+    title: 'Surtido y preparación de pedido',
+    description: 'Organizamos y preparamos tu pedido de manera eficiente para facilitar tu operación.',
+    icon: 'clipboard-check'
+  },
+  {
+    id: 5,
+    title: 'Entrega bajo coordinación',
+    description: 'Coordinamos la entrega de tu pedido en Torreón, Gómez Palacio, Lerdo y zonas cercanas.',
+    icon: 'truck'
   }
 ];
 
