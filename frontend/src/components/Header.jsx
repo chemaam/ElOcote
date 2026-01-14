@@ -94,7 +94,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100">
+        <div className="lg:hidden bg-[#333333] border-t border-gray-600">
           <nav className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link
@@ -103,8 +103,8 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block py-2 text-sm font-medium transition-colors duration-200 ${
                   location.pathname === link.path
-                    ? 'text-[#2A5C2A]'
-                    : 'text-[#333333]'
+                    ? 'text-[#C48F3A]'
+                    : 'text-gray-300'
                 }`}
               >
                 {link.name}
@@ -115,7 +115,7 @@ const Header = () => {
                 variant="outline"
                 size="sm"
                 onClick={handleWhatsAppClick}
-                className="w-full border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white"
+                className="w-full border-[#C48F3A] text-[#C48F3A] hover:bg-[#C48F3A] hover:text-white"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
                 WhatsApp
