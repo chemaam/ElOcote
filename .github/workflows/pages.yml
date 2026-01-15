@@ -5,6 +5,11 @@ on:
     branches: [ "main" ]   # si usas otra rama, cámbiala aquí
   workflow_dispatch:
 
+  - name: Upload artifact
+  uses: actions/upload-pages-artifact@v3
+  with:
+    path: frontend/build
+
 permissions:
   contents: read
   pages: write
