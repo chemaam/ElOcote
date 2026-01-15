@@ -2,13 +2,8 @@ name: Deploy React (CRA+CRACO) to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]   # si usas otra rama, cámbiala aquí
-  workflow_dispatch:
-
-  - name: Upload artifact
-  uses: actions/upload-pages-artifact@v3
-  with:
-    path: frontend/build
+    branches:
+    - main
 
 permissions:
   contents: read
