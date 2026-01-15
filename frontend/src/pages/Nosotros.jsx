@@ -17,9 +17,9 @@ const Nosotros = () => {
         <Breadcrumbs items={[{ label: 'Nosotros' }]} />
 
         {/* Hero */}
-        <div className="mb-20">
+        <div className="mb-22">
           <h1 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
-            Sobre Maderas El Ocote
+            Maderas El Ocote
           </h1>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
