@@ -1,9 +1,9 @@
-name: Deploy React (CRA+CRACO) to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-    - main
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -11,55 +11,12 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          # sin cache para evitar el error del yarn.lock inexistente
-
-      # instala dependencias: si hay yarn.lock usa yarn; si no, usa npm
-      - name: Install deps
-        working-directory: frontend
-        run: |
-          if [ -f yarn.lock ]; then
-            yarn install --frozen-lockfile
-          else
-            npm ci || npm install
-          fi
-
-      - name: Build (CRACO)
-        working-directory: frontend
-        run: |
-          if [ -f yarn.lock ]; then
-            yarn build
-          else
-            npm run build
-          fi
-
-      # SPA fix para GitHub Pages
-      - name: Add SPA 404 for GitHub Pages
-        working-directory: frontend/build
-        run: cp index.html 404.html
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: frontend/build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+    defaults:
+      run
