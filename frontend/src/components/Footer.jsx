@@ -20,7 +20,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Calidad de pino, tiempos confiables. Aserradero en Torreón, Coahuila.
+              Calidad de pino, tiempos confiables. Madereria en Torreón, Coahuila.
             </p>
             <div className="flex space-x-4">
               <a
