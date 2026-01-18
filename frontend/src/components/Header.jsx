@@ -53,7 +53,7 @@ const Header = () => {
                 className={`text-sm font-medium transition-colors duration-200 ${
                   location.pathname === link.path
                     ? 'text-[#260801]'
-                    : 'text-gray-300 hover:text-[#260801]'
+                    : 'text-[#D9C7B8] hover:text-[#260801]'
                 }`}
               >
                 {link.name}
@@ -104,7 +104,7 @@ const Header = () => {
                 className={`block py-2 text-sm font-medium transition-colors duration-200 ${
                   location.pathname === link.path
                     ? 'text-[#260801]'
-                    : 'text-gray-300'
+                    : 'text-[#D9C7B8]'
                 }`}
               >
                 {link.name}
