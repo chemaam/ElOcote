@@ -46,7 +46,7 @@ const ProductoDetalle = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
               {product.name}
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-[#40210d] mb-8 leading-relaxed">
               {product.description}
             </p>
 
@@ -113,7 +113,7 @@ const ProductoDetalle = () => {
                   <div className="w-16 h-16 bg-[#2A5C2A] rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{grade}</span>
                   </div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-[#40210d]">
                     <Link to="/calidades" className="text-[#2A5C2A] hover:underline">
                       Ver detalles de esta clase
                     </Link>
@@ -164,7 +164,7 @@ const ProductoDetalle = () => {
                 </div>
               </div>
               <div className="mt-8 pt-8 border-t border-gray-200">
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-[#40210d] mb-4">
                   <span className="font-semibold text-[#d7ba92]">Nota:</span> Dimensiones personalizadas disponibles bajo pedido. Tiempos de entrega pueden variar.
                 </p>
                 <Button variant="outline" size="sm" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">

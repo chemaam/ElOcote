@@ -21,7 +21,7 @@ const Home = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#d7ba92] leading-tight">
                   Madera de calidad. Respuesta rápida.
                 </h1>
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                <p className="text-lg md:text-xl text-[#40210d] leading-relaxed">
                   Soluciones en madera para construcción, carpintería e industria.
                 </p>
               </div>
@@ -116,7 +116,7 @@ const Home = () => {
                     <Check className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-[#d7ba92] mb-3">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  <p className="text-[#40210d] leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -134,7 +134,7 @@ const Home = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-[#d7ba92] mb-4">
               Nuestras categorías
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-[#40210d] max-w-2xl mx-auto">
               Soluciones en madera para diferentes aplicaciones
             </p>
           </div>
@@ -151,7 +151,7 @@ const Home = () => {
                   <h3 className="text-lg font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {cat.name}
                   </h3>
-                  <p className="text-sm text-gray-600">{cat.desc}</p>
+                  <p className="text-sm text-[#40210d]">{cat.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -186,7 +186,7 @@ const Home = () => {
                       <span key={i} className="text-[#C48F3A] text-xl">★</span>
                     ))}
                   </div>
-                  <p className="text-gray-600 italic leading-relaxed">
+                  <p className="text-[#40210d] italic leading-relaxed">
                     "{testimonial.content}"
                   </p>
                   <div className="pt-4 border-t border-gray-100">

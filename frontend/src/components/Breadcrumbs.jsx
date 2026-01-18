@@ -4,7 +4,7 @@ import { ChevronRight, Home } from 'lucide-react';
 
 const Breadcrumbs = ({ items }) => {
   return (
-    <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
+    <nav className="flex items-center space-x-2 text-sm text-[#40210d] mb-6">
       <Link to="/" className="hover:text-[#2A5C2A] transition-colors duration-200 flex items-center">
         <Home className="w-4 h-4" />
       </Link>

@@ -48,7 +48,7 @@ const BlogPost = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6 leading-tight">
               {post.title}
             </h1>
-            <div className="flex items-center space-x-6 text-gray-600">
+            <div className="flex items-center space-x-6 text-[#40210d]">
               <div className="flex items-center space-x-2">
                 <Calendar className="w-5 h-5" />
                 <span>
@@ -83,7 +83,7 @@ const BlogPost = () => {
               lineHeight: '1.8'
             }}
           >
-            <div className="text-xl text-gray-600 leading-relaxed mb-12 pb-8 border-b border-gray-200">
+            <div className="text-xl text-[#40210d] leading-relaxed mb-12 pb-8 border-b border-gray-200">
               {post.excerpt}
             </div>
             <div
@@ -103,7 +103,7 @@ const BlogPost = () => {
             <h3 className="text-2xl font-bold text-[#d7ba92] mb-4">
               ¿Tienes preguntas sobre madera de pino?
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-[#40210d] mb-6">
               Nuestro equipo está listo para asesorarte
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

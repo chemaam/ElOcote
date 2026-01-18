@@ -16,7 +16,7 @@ const Calidades = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Guía de calidades de madera
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
+          <p className="text-xl text-[#40210d] max-w-3xl leading-relaxed">
             Clasificación por grado de madera de pino. Entiende las diferencias entre 2&M, #3, #4 y #5 para elegir correctamente.
           </p>
         </div>
@@ -38,7 +38,7 @@ const Calidades = () => {
 
                   {/* Content */}
                   <div className="md:col-span-3 p-8 space-y-6">
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-[#40210d] leading-relaxed">
                       {grade.description}
                     </p>
 
@@ -169,7 +169,7 @@ const Calidades = () => {
           <h2 className="text-3xl font-bold text-[#d7ba92] mb-4">
             ¿Aún no sabes qué clase elegir?
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-[#40210d] mb-8 max-w-2xl mx-auto">
             Nuestro equipo puede asesorarte para seleccionar el grado correcto según tu aplicación y presupuesto
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

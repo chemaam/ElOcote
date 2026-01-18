@@ -23,10 +23,10 @@ const Nosotros = () => {
           </h1>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-[#40210d] leading-relaxed">
                 Somos una empresa maderera ubicada en Torreón, Coahuila, dedicada a ofrecer soluciones en madera para construcción, carpintería e industria.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-[#40210d] leading-relaxed">
                 Nuestro compromiso es brindar productos de calidad, atención cercana y tiempos de respuesta eficientes que se adapten a las necesidades de cada cliente.
               </p>
             </div>
@@ -105,7 +105,7 @@ const Nosotros = () => {
                   <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[#40210d] leading-relaxed">
                     {value.description}
                   </p>
                 </CardContent>
@@ -120,7 +120,7 @@ const Nosotros = () => {
             <h2 className="text-3xl font-bold text-[#d7ba92] mb-6">
               Área de cobertura
             </h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg text-[#40210d] mb-8 leading-relaxed">
               Realizamos entregas coordinadas en Torreón, Gómez Palacio, Lerdo y zonas cercanas de La Laguna.
             </p>
             <div className="bg-white p-6 rounded-lg inline-block">

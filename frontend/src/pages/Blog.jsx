@@ -16,7 +16,7 @@ const Blog = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Blog y recursos
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
+          <p className="text-xl text-[#40210d] max-w-3xl leading-relaxed">
             Guías, consejos y conocimiento sobre madera de pino, clasificación, aplicaciones y mejores prácticas.
           </p>
         </div>
@@ -40,7 +40,7 @@ const Blog = () => {
                   <h2 className="text-3xl font-bold text-[#d7ba92] mb-4 group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {blogPosts[0].title}
                   </h2>
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-[#40210d] leading-relaxed mb-6">
                     {blogPosts[0].excerpt}
                   </p>
                   <div className="flex items-center space-x-6 text-sm text-gray-500 mb-6">
@@ -84,7 +84,7 @@ const Blog = () => {
                   <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-sm text-[#40210d] leading-relaxed">
                     {post.excerpt}
                   </p>
                   <div className="flex items-center space-x-4 text-xs text-gray-500 pt-4 border-t border-gray-100">

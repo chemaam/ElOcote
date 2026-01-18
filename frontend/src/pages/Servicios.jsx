@@ -27,7 +27,7 @@ const Servicios = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Nuestros servicios
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
+          <p className="text-xl text-[#40210d] max-w-3xl leading-relaxed">
             Servicios de corte, preparación y entrega para facilitar tu operación.
           </p>
         </div>
@@ -45,7 +45,7 @@ const Servicios = () => {
                   <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[#40210d] leading-relaxed">
                     {service.description}
                   </p>
                 </CardContent>

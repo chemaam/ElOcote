@@ -23,7 +23,7 @@ const Productos = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Nuestros productos
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
+          <p className="text-xl text-[#40210d] max-w-3xl leading-relaxed">
             Madera para construcción, carpintería, industria y tarimas. Selecciona la categoría para ver los detalles.
           </p>
         </div>
@@ -78,7 +78,7 @@ const Productos = () => {
                           <h3 className="text-xl font-bold text-[#d7ba92] mb-3">
                             {product.title}
                           </h3>
-                          <p className="text-gray-600 leading-relaxed mb-4">
+                          <p className="text-[#40210d] leading-relaxed mb-4">
                             {product.description}
                           </p>
                         </div>
@@ -89,7 +89,7 @@ const Productos = () => {
                             <h4 className="font-semibold text-[#2A5C2A] text-sm mb-2">Usos comunes:</h4>
                             <ul className="space-y-1">
                               {product.uses.map((use, idx) => (
-                                <li key={idx} className="text-sm text-gray-600 flex items-start space-x-2">
+                                <li key={idx} className="text-sm text-[#40210d] flex items-start space-x-2">
                                   <span className="text-[#2A5C2A] mt-1">•</span>
                                   <span>{use}</span>
                                 </li>
@@ -145,7 +145,7 @@ const Productos = () => {
           <h2 className="text-3xl font-bold text-[#d7ba92] mb-4">
             ¿No encuentras lo que buscas?
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-[#40210d] mb-8 max-w-2xl mx-auto">
             Contáctanos y con gusto te ayudamos a encontrar la solución ideal para tu proyecto
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

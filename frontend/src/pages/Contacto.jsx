@@ -80,7 +80,7 @@ const Contacto = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Contáctanos
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
+          <p className="text-xl text-[#40210d] max-w-3xl leading-relaxed">
             Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible.
           </p>
         </div>
@@ -182,7 +182,7 @@ const Contacto = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#d7ba92] mb-1">Dirección</h4>
-                      <p className="text-sm text-gray-600 leading-relaxed">
+                      <p className="text-sm text-[#40210d] leading-relaxed">
                         {businessInfo.address.full}
                       </p>
                     </div>
@@ -227,7 +227,7 @@ const Contacto = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#d7ba92] mb-2">Horario</h4>
-                      <div className="text-sm text-gray-600 space-y-1">
+                      <div className="text-sm text-[#40210d] space-y-1">
                         <p>{businessInfo.schedule.weekdays}</p>
                         <p>{businessInfo.schedule.saturday}</p>
                         <p>{businessInfo.schedule.sunday}</p>
@@ -283,7 +283,7 @@ const Contacto = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-semibold text-[#d7ba92] mb-1">Maderas El Ocote</h3>
-                    <p className="text-sm text-gray-600">{businessInfo.address.full}</p>
+                    <p className="text-sm text-[#40210d]">{businessInfo.address.full}</p>
                   </div>
                   <Button
                     onClick={handleMapClick}
@@ -313,7 +313,7 @@ const Contacto = () => {
                   <AccordionTrigger className="text-left font-semibold text-[#d7ba92] hover:text-[#2A5C2A] py-6">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 pb-6 leading-relaxed">
+                  <AccordionContent className="text-[#40210d] pb-6 leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -321,7 +321,7 @@ const Contacto = () => {
             </Accordion>
 
             <div className="mt-12 text-center">
-              <p className="text-gray-600 mb-6">¿No encuentras lo que buscas?</p>
+              <p className="text-[#40210d] mb-6">¿No encuentras lo que buscas?</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   onClick={handleWhatsAppClick}

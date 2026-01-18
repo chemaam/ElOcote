@@ -61,7 +61,7 @@ const Cotizar = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Solicitar cotización
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
+          <p className="text-xl text-[#40210d] max-w-3xl leading-relaxed">
             Completa el formulario y te contactaremos por WhatsApp para atender tu solicitud.
           </p>
         </div>
@@ -156,7 +156,7 @@ const Cotizar = () => {
               <CardContent className="p-6 space-y-6">
                 <div>
                   <h3 className="font-bold text-[#d7ba92] mb-3">¿Qué información incluir?</h3>
-                  <ul className="space-y-2 text-sm text-gray-600">
+                  <ul className="space-y-2 text-sm text-[#40210d]">
                     <li className="flex items-start space-x-2">
                       <span className="text-[#2A5C2A] mt-0.5">•</span>
                       <span>Tipo de producto o categoría</span>
@@ -182,7 +182,7 @@ const Cotizar = () => {
 
                 <div className="pt-6 border-t border-gray-200">
                   <h3 className="font-bold text-[#d7ba92] mb-3">Horario de atención</h3>
-                  <div className="text-sm text-gray-600 space-y-1">
+                  <div className="text-sm text-[#40210d] space-y-1">
                     <p>{businessInfo.schedule.weekdays}</p>
                     <p>{businessInfo.schedule.saturday}</p>
                     <p>{businessInfo.schedule.sunday}</p>
