@@ -19,7 +19,7 @@ const Footer = () => {
                 className="h-12 w-auto object-contain"
               />
             </div>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-[#40210d] text-sm mb-4">
               Calidad de pino, tiempos confiables. Madereria en Torreón, Coahuila.
             </p>
             <div className="flex space-x-4">
@@ -27,7 +27,7 @@ const Footer = () => {
                 href={businessInfo.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#C48F3A] transition-colors duration-200"
+                className="text-[#40210d] hover:text-[#C48F3A] transition-colors duration-200"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -35,7 +35,7 @@ const Footer = () => {
                 href={businessInfo.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#C48F3A] transition-colors duration-200"
+                className="text-[#40210d] hover:text-[#C48F3A] transition-colors duration-200"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -43,7 +43,7 @@ const Footer = () => {
                 href={businessInfo.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#C48F3A] transition-colors duration-200"
+                className="text-[#40210d] hover:text-[#C48F3A] transition-colors duration-200"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -55,22 +55,22 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Enlaces rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/productos" className="text-gray-400 hover:text-[#C48F3A] text-sm transition-colors duration-200">
+                <Link to="/productos" className="text-[#40210d] hover:text-[#C48F3A] text-sm transition-colors duration-200">
                   Productos
                 </Link>
               </li>
               <li>
-                <Link to="/servicios" className="text-gray-400 hover:text-[#C48F3A] text-sm transition-colors duration-200">
+                <Link to="/servicios" className="text-[#40210d] hover:text-[#C48F3A] text-sm transition-colors duration-200">
                   Servicios
                 </Link>
               </li>
               <li>
-                <Link to="/nosotros" className="text-gray-400 hover:text-[#C48F3A] text-sm transition-colors duration-200">
+                <Link to="/nosotros" className="text-[#40210d] hover:text-[#C48F3A] text-sm transition-colors duration-200">
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link to="/contacto" className="text-gray-400 hover:text-[#C48F3A] text-sm transition-colors duration-200">
+                <Link to="/contacto" className="text-[#40210d] hover:text-[#C48F3A] text-sm transition-colors duration-200">
                   Contacto
                 </Link>
               </li>
@@ -83,17 +83,17 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-[#C48F3A] flex-shrink-0 mt-0.5" />
-                <span className="text-gray-400 text-sm">{businessInfo.address.full}</span>
+                <span className="text-[#40210d] text-sm">{businessInfo.address.full}</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[#C48F3A] flex-shrink-0" />
-                <a href={`tel:${businessInfo.phone}`} className="text-gray-400 hover:text-[#C48F3A] text-sm transition-colors duration-200">
+                <a href={`tel:${businessInfo.phone}`} className="text-[#40210d] hover:text-[#C48F3A] text-sm transition-colors duration-200">
                   {businessInfo.phone}
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-[#C48F3A] flex-shrink-0" />
-                <a href={`mailto:${businessInfo.email}`} className="text-gray-400 hover:text-[#C48F3A] text-sm transition-colors duration-200">
+                <a href={`mailto:${businessInfo.email}`} className="text-[#40210d] hover:text-[#C48F3A] text-sm transition-colors duration-200">
                   {businessInfo.email}
                 </a>
               </li>
@@ -106,7 +106,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-[#C48F3A] flex-shrink-0 mt-0.5" />
-                <div className="text-gray-400 text-sm">
+                <div className="text-[#40210d] text-sm">
                   <p>{businessInfo.schedule.weekdays}</p>
                   <p className="mt-1">{businessInfo.schedule.saturday}</p>
                   <p className="mt-1">{businessInfo.schedule.sunday}</p>

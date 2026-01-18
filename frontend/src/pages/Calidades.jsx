@@ -115,7 +115,7 @@ const Calidades = () => {
                         <Check className="w-5 h-5 text-green-600 mx-auto" />
                       </td>
                       <td className="px-6 py-4 text-center">
-                        <span className="text-gray-400">—</span>
+                        <span className="text-[#40210d]">—</span>
                       </td>
                       <td className="px-6 py-4 text-center">
                         <X className="w-5 h-5 text-red-500 mx-auto" />
@@ -133,7 +133,7 @@ const Calidades = () => {
                         <Check className="w-5 h-5 text-green-600 mx-auto" />
                       </td>
                       <td className="px-6 py-4 text-center">
-                        <span className="text-gray-400">—</span>
+                        <span className="text-[#40210d]">—</span>
                       </td>
                     </tr>
                     <tr className="hover:bg-gray-50 bg-gray-50/50">

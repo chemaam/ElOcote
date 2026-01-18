@@ -10,7 +10,7 @@ const Breadcrumbs = ({ items }) => {
       </Link>
       {items.map((item, index) => (
         <React.Fragment key={index}>
-          <ChevronRight className="w-4 h-4 text-gray-400" />
+          <ChevronRight className="w-4 h-4 text-[#40210d]" />
           {item.path ? (
             <Link to={item.path} className="hover:text-[#2A5C2A] transition-colors duration-200">
               {item.label}
