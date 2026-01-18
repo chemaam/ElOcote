@@ -13,7 +13,7 @@ const Blog = () => {
         <Breadcrumbs items={[{ label: 'Blog' }]} />
 
         <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Blog y recursos
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
@@ -37,7 +37,7 @@ const Blog = () => {
                   <div className="inline-block px-3 py-1 bg-[#2A5C2A] text-white text-xs font-semibold rounded-full mb-4 w-fit">
                     {blogPosts[0].category}
                   </div>
-                  <h2 className="text-3xl font-bold text-[#333333] mb-4 group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h2 className="text-3xl font-bold text-[#d7ba92] mb-4 group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {blogPosts[0].title}
                   </h2>
                   <p className="text-gray-600 leading-relaxed mb-6">
@@ -81,7 +81,7 @@ const Blog = () => {
                   <div className="inline-block px-3 py-1 bg-[#f8f9f8] text-[#2A5C2A] text-xs font-semibold rounded-full">
                     {post.category}
                   </div>
-                  <h3 className="text-xl font-bold text-[#333333] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {post.title}
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">

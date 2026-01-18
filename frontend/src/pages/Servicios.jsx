@@ -24,7 +24,7 @@ const Servicios = () => {
         <Breadcrumbs items={[{ label: 'Servicios' }]} />
 
         <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Nuestros servicios
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
@@ -42,7 +42,7 @@ const Servicios = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-[#2A5C2A] to-[#1e4a1e] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {IconComponent && <IconComponent className="w-8 h-8 text-white" />}
                   </div>
-                  <h3 className="text-xl font-bold text-[#333333] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">

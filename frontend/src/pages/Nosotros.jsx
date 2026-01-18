@@ -18,7 +18,7 @@ const Nosotros = () => {
 
         {/* Hero */}
         <div className="mb-22">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Maderas El Ocote
           </h1>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -71,7 +71,7 @@ const Nosotros = () => {
 
         {/* Valores */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-[#333333] mb-12 text-center">
+          <h2 className="text-3xl font-bold text-[#d7ba92] mb-12 text-center">
             Nuestros valores
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -102,7 +102,7 @@ const Nosotros = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-[#2A5C2A] to-[#1e4a1e] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#333333] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {value.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
@@ -117,7 +117,7 @@ const Nosotros = () => {
         {/* Cobertura */}
         <section className="mb-20 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0] rounded-2xl p-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-[#333333] mb-6">
+            <h2 className="text-3xl font-bold text-[#d7ba92] mb-6">
               Área de cobertura
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">

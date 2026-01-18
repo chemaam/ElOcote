@@ -20,7 +20,7 @@ const Productos = () => {
         <Breadcrumbs items={[{ label: 'Productos' }]} />
 
         <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Nuestros productos
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
@@ -75,7 +75,7 @@ const Productos = () => {
                       {/* Contenido sobre la imagen */}
                       <div className="relative z-10">
                         <div>
-                          <h3 className="text-xl font-bold text-[#333333] mb-3">
+                          <h3 className="text-xl font-bold text-[#d7ba92] mb-3">
                             {product.title}
                           </h3>
                           <p className="text-gray-600 leading-relaxed mb-4">
@@ -142,7 +142,7 @@ const Productos = () => {
 
         {/* Bottom CTA general */}
         <div className="mt-20 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0] rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-[#333333] mb-4">
+          <h2 className="text-3xl font-bold text-[#d7ba92] mb-4">
             ¿No encuentras lo que buscas?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">

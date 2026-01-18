@@ -77,7 +77,7 @@ const Contacto = () => {
         <Breadcrumbs items={[{ label: 'Contacto' }]} />
 
         <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Contáctanos
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
@@ -90,7 +90,7 @@ const Contacto = () => {
           <div className="lg:col-span-2">
             <Card className="shadow-xl">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-[#333333] mb-6">Envíanos un mensaje</h2>
+                <h2 className="text-2xl font-bold text-[#d7ba92] mb-6">Envíanos un mensaje</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -173,7 +173,7 @@ const Contacto = () => {
           <div className="space-y-6">
             <Card className="shadow-lg border-2 border-[#2A5C2A]">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-[#333333] mb-6">Información de contacto</h3>
+                <h3 className="text-xl font-bold text-[#d7ba92] mb-6">Información de contacto</h3>
                 <div className="space-y-6">
                   {/* Address */}
                   <div className="flex items-start space-x-4">
@@ -181,7 +181,7 @@ const Contacto = () => {
                       <MapPin className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#333333] mb-1">Dirección</h4>
+                      <h4 className="font-semibold text-[#d7ba92] mb-1">Dirección</h4>
                       <p className="text-sm text-gray-600 leading-relaxed">
                         {businessInfo.address.full}
                       </p>
@@ -194,7 +194,7 @@ const Contacto = () => {
                       <Phone className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#333333] mb-1">Teléfono</h4>
+                      <h4 className="font-semibold text-[#d7ba92] mb-1">Teléfono</h4>
                       <button
                         onClick={handlePhoneClick}
                         className="text-sm text-[#2A5C2A] hover:underline"
@@ -210,7 +210,7 @@ const Contacto = () => {
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#333333] mb-1">Correo</h4>
+                      <h4 className="font-semibold text-[#d7ba92] mb-1">Correo</h4>
                       <button
                         onClick={handleEmailClick}
                         className="text-sm text-[#2A5C2A] hover:underline"
@@ -226,7 +226,7 @@ const Contacto = () => {
                       <Clock className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#333333] mb-2">Horario</h4>
+                      <h4 className="font-semibold text-[#d7ba92] mb-2">Horario</h4>
                       <div className="text-sm text-gray-600 space-y-1">
                         <p>{businessInfo.schedule.weekdays}</p>
                         <p>{businessInfo.schedule.saturday}</p>
@@ -251,7 +251,7 @@ const Contacto = () => {
 
             <Card className="shadow-lg">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-[#333333] mb-4">¿Prefieres cotizar directamente?</h3>
+                <h3 className="font-semibold text-[#d7ba92] mb-4">¿Prefieres cotizar directamente?</h3>
                 <Link to="/cotizar">
                   <Button variant="outline" size="lg" className="w-full border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
                     Ir al cotizador
@@ -264,7 +264,7 @@ const Contacto = () => {
 
         {/* Map Section */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-[#333333] mb-8">Ubicación</h2>
+          <h2 className="text-3xl font-bold text-[#d7ba92] mb-8">Ubicación</h2>
           <Card className="shadow-xl overflow-hidden">
             <CardContent className="p-0">
               <div className="aspect-[21/9] bg-gray-200 relative">
@@ -282,7 +282,7 @@ const Contacto = () => {
               <div className="p-6 bg-[#f8f9f8]">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-semibold text-[#333333] mb-1">Maderas El Ocote</h3>
+                    <h3 className="font-semibold text-[#d7ba92] mb-1">Maderas El Ocote</h3>
                     <p className="text-sm text-gray-600">{businessInfo.address.full}</p>
                   </div>
                   <Button
@@ -301,7 +301,7 @@ const Contacto = () => {
 
         {/* FAQ Section */}
         <section>
-          <h2 className="text-3xl font-bold text-[#333333] mb-8 text-center">Preguntas frecuentes</h2>
+          <h2 className="text-3xl font-bold text-[#d7ba92] mb-8 text-center">Preguntas frecuentes</h2>
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq) => (
@@ -310,7 +310,7 @@ const Contacto = () => {
                   value={`item-${faq.id}`}
                   className="border-2 border-gray-100 rounded-lg px-6 hover:border-[#2A5C2A] transition-colors duration-200"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-[#333333] hover:text-[#2A5C2A] py-6">
+                  <AccordionTrigger className="text-left font-semibold text-[#d7ba92] hover:text-[#2A5C2A] py-6">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-600 pb-6 leading-relaxed">

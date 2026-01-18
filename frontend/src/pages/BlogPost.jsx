@@ -14,7 +14,7 @@ const BlogPost = () => {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-[#333333] mb-4">Artículo no encontrado</h1>
+          <h1 className="text-4xl font-bold text-[#d7ba92] mb-4">Artículo no encontrado</h1>
           <Link to="/blog">
             <Button className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white">
               Volver al blog
@@ -45,7 +45,7 @@ const BlogPost = () => {
             <div className="inline-block px-4 py-2 bg-[#2A5C2A] text-white text-sm font-semibold rounded-full mb-6">
               {post.category}
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6 leading-tight">
               {post.title}
             </h1>
             <div className="flex items-center space-x-6 text-gray-600">
@@ -79,7 +79,7 @@ const BlogPost = () => {
           <div
             className="prose prose-lg max-w-none"
             style={{
-              color: '#333333',
+              color: '#d7ba92',
               lineHeight: '1.8'
             }}
           >
@@ -100,7 +100,7 @@ const BlogPost = () => {
         {/* CTA Card */}
         <Card className="my-16 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0] border-2 border-[#2A5C2A]/20">
           <CardContent className="p-8 text-center">
-            <h3 className="text-2xl font-bold text-[#333333] mb-4">
+            <h3 className="text-2xl font-bold text-[#d7ba92] mb-4">
               ¿Tienes preguntas sobre madera de pino?
             </h3>
             <p className="text-gray-600 mb-6">
@@ -131,7 +131,7 @@ const BlogPost = () => {
                     <ArrowLeft className="w-4 h-4" />
                     <span className="text-sm font-semibold">Artículo anterior</span>
                   </div>
-                  <h4 className="text-lg font-bold text-[#333333] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h4 className="text-lg font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {previousPost.title}
                   </h4>
                 </CardContent>
@@ -149,7 +149,7 @@ const BlogPost = () => {
                     <span className="text-sm font-semibold">Siguiente artículo</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
-                  <h4 className="text-lg font-bold text-[#333333] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h4 className="text-lg font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {nextPost.title}
                   </h4>
                 </CardContent>

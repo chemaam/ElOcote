@@ -58,7 +58,7 @@ const Cotizar = () => {
         <Breadcrumbs items={[{ label: 'Cotizar' }]} />
 
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Solicitar cotización
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
@@ -71,7 +71,7 @@ const Cotizar = () => {
           <div className="lg:col-span-2">
             <Card className="shadow-xl">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-[#333333] mb-6">Información de contacto</h2>
+                <h2 className="text-2xl font-bold text-[#d7ba92] mb-6">Información de contacto</h2>
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -155,7 +155,7 @@ const Cotizar = () => {
             <Card className="shadow-lg sticky top-24 border-2 border-[#2A5C2A]">
               <CardContent className="p-6 space-y-6">
                 <div>
-                  <h3 className="font-bold text-[#333333] mb-3">¿Qué información incluir?</h3>
+                  <h3 className="font-bold text-[#d7ba92] mb-3">¿Qué información incluir?</h3>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li className="flex items-start space-x-2">
                       <span className="text-[#2A5C2A] mt-0.5">•</span>
@@ -181,7 +181,7 @@ const Cotizar = () => {
                 </div>
 
                 <div className="pt-6 border-t border-gray-200">
-                  <h3 className="font-bold text-[#333333] mb-3">Horario de atención</h3>
+                  <h3 className="font-bold text-[#d7ba92] mb-3">Horario de atención</h3>
                   <div className="text-sm text-gray-600 space-y-1">
                     <p>{businessInfo.schedule.weekdays}</p>
                     <p>{businessInfo.schedule.saturday}</p>
@@ -190,7 +190,7 @@ const Cotizar = () => {
                 </div>
 
                 <div className="pt-6 border-t border-gray-200">
-                  <h3 className="font-bold text-[#333333] mb-3">También puedes</h3>
+                  <h3 className="font-bold text-[#d7ba92] mb-3">También puedes</h3>
                   <div className="space-y-2">
                     <a
                       href={`tel:${businessInfo.phone}`}

@@ -22,7 +22,7 @@ html {
 
 /* Custom prose styles for blog content */
 .prose h2 {
-  color: #333333;
+  color: #d7ba92;
   font-size: 1.875rem;
   font-weight: 700;
   margin-top: 2rem;
@@ -30,7 +30,7 @@ html {
 }
 
 .prose h3 {
-  color: #333333;
+  color: #d7ba92;
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 1.5rem;
@@ -64,6 +64,6 @@ html {
 }
 
 .prose strong {
-  color: #333333;
+  color: #d7ba92;
   font-weight: 600;
 }

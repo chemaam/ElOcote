@@ -13,7 +13,7 @@ const Calidades = () => {
         <Breadcrumbs items={[{ label: 'Calidades' }]} />
 
         <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
             Guía de calidades de madera
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
@@ -43,7 +43,7 @@ const Calidades = () => {
                     </p>
 
                     <div>
-                      <h3 className="font-bold text-[#333333] mb-3">Características:</h3>
+                      <h3 className="font-bold text-[#d7ba92] mb-3">Características:</h3>
                       <ul className="space-y-2">
                         {grade.characteristics.map((char, idx) => (
                           <li key={idx} className="flex items-start space-x-3">
@@ -55,7 +55,7 @@ const Calidades = () => {
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-[#333333] mb-3">Ideal para:</h3>
+                      <h3 className="font-bold text-[#d7ba92] mb-3">Ideal para:</h3>
                       <div className="flex flex-wrap gap-2">
                         {grade.idealFor.map((use, idx) => (
                           <span
@@ -70,7 +70,7 @@ const Calidades = () => {
 
                     <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
                       <span className="text-sm text-gray-500">
-                        <span className="font-semibold text-[#333333]">Rango de precio:</span> {grade.price}
+                        <span className="font-semibold text-[#d7ba92]">Rango de precio:</span> {grade.price}
                       </span>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ const Calidades = () => {
 
         {/* Comparison Table */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-[#333333] mb-8 text-center">
+          <h2 className="text-3xl font-bold text-[#d7ba92] mb-8 text-center">
             Comparación rápida
           </h2>
           <Card className="shadow-xl overflow-hidden">
@@ -166,7 +166,7 @@ const Calidades = () => {
 
         {/* Help Section */}
         <section className="bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0] rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-[#333333] mb-4">
+          <h2 className="text-3xl font-bold text-[#d7ba92] mb-4">
             ¿Aún no sabes qué clase elegir?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">

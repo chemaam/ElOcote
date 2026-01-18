@@ -18,7 +18,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#333333] leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#d7ba92] leading-tight">
                   Madera de calidad. Respuesta rápida.
                 </h1>
                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -90,7 +90,7 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#333333]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#d7ba92]">
               ¿Por qué elegirnos?
             </h2>
           </div>
@@ -115,7 +115,7 @@ const Home = () => {
                   <div className="w-16 h-16 bg-[#2A5C2A] rounded-full flex items-center justify-center mx-auto mb-4">
                     <Check className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#333333] mb-3">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-[#d7ba92] mb-3">{item.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
@@ -131,7 +131,7 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#d7ba92] mb-4">
               Nuestras categorías
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -148,7 +148,7 @@ const Home = () => {
             ].map((cat, index) => (
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#2A5C2A]">
                 <CardContent className="p-6 text-center space-y-3">
-                  <h3 className="text-lg font-bold text-[#333333] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
                     {cat.name}
                   </h3>
                   <p className="text-sm text-gray-600">{cat.desc}</p>
@@ -172,7 +172,7 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#d7ba92] mb-4">
               Lo que dicen nuestros clientes
             </h2>
           </div>
@@ -190,7 +190,7 @@ const Home = () => {
                     "{testimonial.content}"
                   </p>
                   <div className="pt-4 border-t border-gray-100">
-                    <p className="font-semibold text-[#333333]">{testimonial.name}</p>
+                    <p className="font-semibold text-[#d7ba92]">{testimonial.name}</p>
                     <p className="text-sm text-gray-500">{testimonial.position}</p>
                     <p className="text-sm text-[#2A5C2A]">{testimonial.company}</p>
                   </div>

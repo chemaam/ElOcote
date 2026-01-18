@@ -14,7 +14,7 @@ const ProductoDetalle = () => {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-[#333333] mb-4">Producto no encontrado</h1>
+          <h1 className="text-4xl font-bold text-[#d7ba92] mb-4">Producto no encontrado</h1>
           <Link to="/productos">
             <Button className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white">
               Ver todos los productos
@@ -43,7 +43,7 @@ const ProductoDetalle = () => {
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
               {product.name}
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -68,7 +68,7 @@ const ProductoDetalle = () => {
             </div>
 
             <div className="bg-[#f8f9f8] p-6 rounded-lg">
-              <h3 className="font-semibold text-[#333333] mb-4">Características principales:</h3>
+              <h3 className="font-semibold text-[#d7ba92] mb-4">Características principales:</h3>
               <ul className="space-y-3">
                 {product.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start space-x-3">
@@ -91,7 +91,7 @@ const ProductoDetalle = () => {
 
         {/* Applications */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-[#333333] mb-8">Aplicaciones</h2>
+          <h2 className="text-3xl font-bold text-[#d7ba92] mb-8">Aplicaciones</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {product.applications.map((application, idx) => (
               <Card key={idx} className="border-2 hover:border-[#2A5C2A] transition-colors duration-200">
@@ -105,7 +105,7 @@ const ProductoDetalle = () => {
 
         {/* Grades */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-[#333333] mb-8">Clases disponibles</h2>
+          <h2 className="text-3xl font-bold text-[#d7ba92] mb-8">Clases disponibles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {product.classes.map((grade, idx) => (
               <Card key={idx} className="border-2 border-[#2A5C2A] bg-gradient-to-br from-white to-[#f8f9f8]">
@@ -134,7 +134,7 @@ const ProductoDetalle = () => {
 
         {/* Dimensions */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-[#333333] mb-8">Dimensiones estándar</h2>
+          <h2 className="text-3xl font-bold text-[#d7ba92] mb-8">Dimensiones estándar</h2>
           <Card className="shadow-lg">
             <CardContent className="p-8">
               <div className="grid md:grid-cols-3 gap-8">
@@ -165,7 +165,7 @@ const ProductoDetalle = () => {
               </div>
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <p className="text-sm text-gray-600 mb-4">
-                  <span className="font-semibold text-[#333333]">Nota:</span> Dimensiones personalizadas disponibles bajo pedido. Tiempos de entrega pueden variar.
+                  <span className="font-semibold text-[#d7ba92]">Nota:</span> Dimensiones personalizadas disponibles bajo pedido. Tiempos de entrega pueden variar.
                 </p>
                 <Button variant="outline" size="sm" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
                   <Download className="w-4 h-4 mr-2" />
@@ -178,7 +178,7 @@ const ProductoDetalle = () => {
 
         {/* Conditions */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-[#333333] mb-8">Estados disponibles</h2>
+          <h2 className="text-3xl font-bold text-[#d7ba92] mb-8">Estados disponibles</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {product.conditions.map((condition, idx) => (
               <Card key={idx} className="border-2 hover:border-[#2A5C2A] transition-colors duration-200">
@@ -190,7 +190,7 @@ const ProductoDetalle = () => {
           </div>
           <div className="mt-8 bg-[#f8f9f8] p-6 rounded-lg">
             <p className="text-gray-700 leading-relaxed">
-              <span className="font-semibold text-[#333333]">Recomendación:</span> Para mueblería y carpintería fina, recomendamos madera estufada. Para construcción y tarimas, madera seca al aire o verde según tu aplicación.
+              <span className="font-semibold text-[#d7ba92]">Recomendación:</span> Para mueblería y carpintería fina, recomendamos madera estufada. Para construcción y tarimas, madera seca al aire o verde según tu aplicación.
             </p>
             <Link to="/blog/secado-vs-verde" className="text-[#2A5C2A] hover:underline text-sm mt-2 inline-block">
               Leer más: Madera seca vs verde →
