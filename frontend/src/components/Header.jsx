@@ -52,8 +52,8 @@ const Header = () => {
                 to={link.path}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   location.pathname === link.path
-                    ? 'text-[#C48F3A]'
-                    : 'text-gray-300 hover:text-[#C48F3A]'
+                    ? 'text-[#260801]'
+                    : 'text-gray-300 hover:text-[#260801]'
                 }`}
               >
                 {link.name}
@@ -67,7 +67,7 @@ const Header = () => {
               variant="outline"
               size="sm"
               onClick={handleWhatsAppClick}
-              className="border-[#C48F3A] text-[#C48F3A] hover:bg-[#C48F3A] hover:text-white transition-colors duration-200"
+              className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white transition-colors duration-200"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp
@@ -103,7 +103,7 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block py-2 text-sm font-medium transition-colors duration-200 ${
                   location.pathname === link.path
-                    ? 'text-[#C48F3A]'
+                    ? 'text-[#260801]'
                     : 'text-gray-300'
                 }`}
               >
@@ -115,7 +115,7 @@ const Header = () => {
                 variant="outline"
                 size="sm"
                 onClick={handleWhatsAppClick}
-                className="w-full border-[#C48F3A] text-[#C48F3A] hover:bg-[#C48F3A] hover:text-white"
+                className="w-full border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
                 WhatsApp
