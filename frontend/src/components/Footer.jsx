@@ -14,7 +14,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="https://customer-assets.emergentagent.com/job_72e09283-43db-4641-b5ee-4dc83dfcd7b6/artifacts/z2i2wjrh_Logo.png"
+                src="https://raw.githubusercontent.com/chemaam/ElOcote/refs/heads/main/frontend/src/media/Logo.png"
                 alt="Maderas El Ocote"
                 className="h-12 w-auto object-contain"
               />
