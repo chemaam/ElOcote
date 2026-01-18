@@ -171,13 +171,13 @@ const Contacto = () => {
 
           {/* Contact Info Sidebar */}
           <div className="space-y-6">
-            <Card className="shadow-lg border-2 border-[#2A5C2A]">
+            <Card className="shadow-lg border-2 border-[#260801]">
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold text-[#d7ba92] mb-6">Información de contacto</h3>
                 <div className="space-y-6">
                   {/* Address */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-[#2A5C2A] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#260801] rounded-full flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -190,14 +190,14 @@ const Contacto = () => {
 
                   {/* Phone */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-[#2A5C2A] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#260801] rounded-full flex items-center justify-center flex-shrink-0">
                       <Phone className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#d7ba92] mb-1">Teléfono</h4>
                       <button
                         onClick={handlePhoneClick}
-                        className="text-sm text-[#2A5C2A] hover:underline"
+                        className="text-sm text-[#260801] hover:underline"
                       >
                         {businessInfo.phone}
                       </button>
@@ -206,14 +206,14 @@ const Contacto = () => {
 
                   {/* Email */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-[#2A5C2A] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#260801] rounded-full flex items-center justify-center flex-shrink-0">
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#d7ba92] mb-1">Correo</h4>
                       <button
                         onClick={handleEmailClick}
-                        className="text-sm text-[#2A5C2A] hover:underline"
+                        className="text-sm text-[#260801] hover:underline"
                       >
                         {businessInfo.email}
                       </button>
@@ -222,7 +222,7 @@ const Contacto = () => {
 
                   {/* Schedule */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-[#2A5C2A] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#260801] rounded-full flex items-center justify-center flex-shrink-0">
                       <Clock className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -253,7 +253,7 @@ const Contacto = () => {
               <CardContent className="p-6">
                 <h3 className="font-semibold text-[#d7ba92] mb-4">¿Prefieres cotizar directamente?</h3>
                 <Link to="/cotizar">
-                  <Button variant="outline" size="lg" className="w-full border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
+                  <Button variant="outline" size="lg" className="w-full border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white">
                     Ir al cotizador
                   </Button>
                 </Link>
@@ -288,7 +288,7 @@ const Contacto = () => {
                   <Button
                     onClick={handleMapClick}
                     variant="outline"
-                    className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white"
+                    className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Ver en Google Maps
@@ -308,9 +308,9 @@ const Contacto = () => {
                 <AccordionItem
                   key={faq.id}
                   value={`item-${faq.id}`}
-                  className="border-2 border-gray-100 rounded-lg px-6 hover:border-[#2A5C2A] transition-colors duration-200"
+                  className="border-2 border-gray-100 rounded-lg px-6 hover:border-[#260801] transition-colors duration-200"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-[#d7ba92] hover:text-[#2A5C2A] py-6">
+                  <AccordionTrigger className="text-left font-semibold text-[#d7ba92] hover:text-[#260801] py-6">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-[#40210d] pb-6 leading-relaxed">
@@ -335,7 +335,7 @@ const Contacto = () => {
                   onClick={handlePhoneClick}
                   size="lg"
                   variant="outline"
-                  className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white"
+                  className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Llamar ahora

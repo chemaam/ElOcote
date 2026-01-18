@@ -43,24 +43,24 @@ const Nosotros = () => {
         {/* Misión y Visión */}
         <section className="mb-20">
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-2 border-[#2A5C2A]/20 hover:border-[#2A5C2A] transition-colors duration-300">
+            <Card className="border-2 border-[#260801]/20 hover:border-[#260801] transition-colors duration-300">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-[#2A5C2A] rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-[#260801] rounded-full flex items-center justify-center mx-auto mb-6">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h2 className="text-2xl font-bold text-[#2A5C2A] mb-4 text-center">Misión</h2>
+                <h2 className="text-2xl font-bold text-[#260801] mb-4 text-center">Misión</h2>
                 <p className="text-gray-700 leading-relaxed text-center">
                   Ofrecer madera de calidad para construcción, carpintería e industria, brindando soluciones confiables, atención cercana y tiempos de respuesta eficientes que se adapten a las necesidades de cada cliente.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-[#2A5C2A]/20 hover:border-[#2A5C2A] transition-colors duration-300">
+            <Card className="border-2 border-[#260801]/20 hover:border-[#260801] transition-colors duration-300">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-[#2A5C2A] rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-[#260801] rounded-full flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <h2 className="text-2xl font-bold text-[#2A5C2A] mb-4 text-center">Visión</h2>
+                <h2 className="text-2xl font-bold text-[#260801] mb-4 text-center">Visión</h2>
                 <p className="text-gray-700 leading-relaxed text-center">
                   Consolidarnos como una empresa maderera de referencia en el mercado, reconocida por la calidad de nuestros productos, la flexibilidad en nuestras soluciones y la confianza que generamos con cada cliente.
                 </p>
@@ -97,12 +97,12 @@ const Nosotros = () => {
                 description: 'Nos adaptamos a las necesidades específicas de cada cliente'
               }
             ].map((value, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#2A5C2A]">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#260801]">
                 <CardContent className="p-8 text-center space-y-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#2A5C2A] to-[#1e4a1e] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#260801] to-[#1e4a1e] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#260801] transition-colors duration-200">
                     {value.title}
                   </h3>
                   <p className="text-[#40210d] leading-relaxed">
@@ -125,7 +125,7 @@ const Nosotros = () => {
             </p>
             <div className="bg-white p-6 rounded-lg inline-block">
               <p className="text-gray-700">
-                <span className="font-semibold text-[#2A5C2A]">Ubicación:</span><br />
+                <span className="font-semibold text-[#260801]">Ubicación:</span><br />
                 {businessInfo.address.full}
               </p>
             </div>
@@ -133,7 +133,7 @@ const Nosotros = () => {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#2A5C2A] rounded-2xl p-12 text-center">
+        <section className="bg-[#260801] rounded-2xl p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             ¿Quieres trabajar con nosotros?
           </h2>
@@ -144,13 +144,13 @@ const Nosotros = () => {
             <Button
               size="lg"
               onClick={handleWhatsAppClick}
-              className="bg-white text-[#2A5C2A] hover:bg-gray-100 w-full sm:w-auto"
+              className="bg-white text-[#260801] hover:bg-gray-100 w-full sm:w-auto"
             >
               <MessageCircle className="mr-2 w-5 h-5" />
               Cotizar por WhatsApp
             </Button>
             <Link to="/contacto">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#2A5C2A] w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#260801] w-full sm:w-auto">
                 Contactar
               </Button>
             </Link>

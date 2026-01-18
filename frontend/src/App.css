@@ -16,7 +16,7 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: #2A5C2A;
+  background-color: #260801;
   color: white;
 }
 
@@ -55,7 +55,7 @@ html {
 }
 
 .prose a {
-  color: #2A5C2A;
+  color: #260801;
   text-decoration: underline;
 }
 

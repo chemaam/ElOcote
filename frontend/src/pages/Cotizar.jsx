@@ -152,29 +152,29 @@ const Cotizar = () => {
 
           {/* Sidebar Info */}
           <div className="space-y-6">
-            <Card className="shadow-lg sticky top-24 border-2 border-[#2A5C2A]">
+            <Card className="shadow-lg sticky top-24 border-2 border-[#260801]">
               <CardContent className="p-6 space-y-6">
                 <div>
                   <h3 className="font-bold text-[#d7ba92] mb-3">¿Qué información incluir?</h3>
                   <ul className="space-y-2 text-sm text-[#40210d]">
                     <li className="flex items-start space-x-2">
-                      <span className="text-[#2A5C2A] mt-0.5">•</span>
+                      <span className="text-[#260801] mt-0.5">•</span>
                       <span>Tipo de producto o categoría</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-[#2A5C2A] mt-0.5">•</span>
+                      <span className="text-[#260801] mt-0.5">•</span>
                       <span>Medidas (si las conoces)</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-[#2A5C2A] mt-0.5">•</span>
+                      <span className="text-[#260801] mt-0.5">•</span>
                       <span>Cantidad aproximada</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-[#2A5C2A] mt-0.5">•</span>
+                      <span className="text-[#260801] mt-0.5">•</span>
                       <span>Uso o aplicación del material</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-[#2A5C2A] mt-0.5">•</span>
+                      <span className="text-[#260801] mt-0.5">•</span>
                       <span>Fecha estimada de entrega</span>
                     </li>
                   </ul>
@@ -194,14 +194,14 @@ const Cotizar = () => {
                   <div className="space-y-2">
                     <a
                       href={`tel:${businessInfo.phone}`}
-                      className="flex items-center space-x-2 text-sm text-[#2A5C2A] hover:underline"
+                      className="flex items-center space-x-2 text-sm text-[#260801] hover:underline"
                     >
                       <span>📞</span>
                       <span>Llamar: {businessInfo.phone}</span>
                     </a>
                     <a
                       href={`mailto:${businessInfo.email}`}
-                      className="flex items-center space-x-2 text-sm text-[#2A5C2A] hover:underline"
+                      className="flex items-center space-x-2 text-sm text-[#260801] hover:underline"
                     >
                       <span>✉️</span>
                       <span>Email: {businessInfo.email}</span>

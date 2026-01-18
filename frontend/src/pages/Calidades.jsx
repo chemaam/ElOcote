@@ -24,11 +24,11 @@ const Calidades = () => {
         {/* Grades Detailed Cards */}
         <div className="space-y-8 mb-20">
           {woodGrades.map((grade, index) => (
-            <Card key={index} className="border-2 hover:border-[#2A5C2A] transition-all duration-300 shadow-lg">
+            <Card key={index} className="border-2 hover:border-[#260801] transition-all duration-300 shadow-lg">
               <CardContent className="p-0">
                 <div className="grid md:grid-cols-4 gap-0">
                   {/* Grade Badge */}
-                  <div className="bg-gradient-to-br from-[#2A5C2A] to-[#1e4a1e] p-8 flex flex-col items-center justify-center text-white">
+                  <div className="bg-gradient-to-br from-[#260801] to-[#1e4a1e] p-8 flex flex-col items-center justify-center text-white">
                     <div className="text-5xl font-bold mb-2">{grade.grade}</div>
                     <div className="text-sm opacity-90">{grade.name}</div>
                     <div className="mt-4 px-4 py-2 bg-white/20 rounded-full text-xs font-semibold">
@@ -47,7 +47,7 @@ const Calidades = () => {
                       <ul className="space-y-2">
                         {grade.characteristics.map((char, idx) => (
                           <li key={idx} className="flex items-start space-x-3">
-                            <Check className="w-5 h-5 text-[#2A5C2A] flex-shrink-0 mt-0.5" />
+                            <Check className="w-5 h-5 text-[#260801] flex-shrink-0 mt-0.5" />
                             <span className="text-gray-700">{char}</span>
                           </li>
                         ))}
@@ -60,7 +60,7 @@ const Calidades = () => {
                         {grade.idealFor.map((use, idx) => (
                           <span
                             key={idx}
-                            className="px-4 py-2 bg-[#f8f9f8] border border-[#2A5C2A]/20 rounded-full text-sm text-gray-700"
+                            className="px-4 py-2 bg-[#f8f9f8] border border-[#260801]/20 rounded-full text-sm text-gray-700"
                           >
                             {use}
                           </span>
@@ -89,7 +89,7 @@ const Calidades = () => {
             <CardContent className="p-0">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[#2A5C2A] text-white">
+                  <thead className="bg-[#260801] text-white">
                     <tr>
                       <th className="px-6 py-4 text-left font-semibold">Característica</th>
                       <th className="px-6 py-4 text-center font-semibold">2&M</th>
@@ -157,7 +157,7 @@ const Calidades = () => {
           </Card>
 
           <div className="mt-8 text-center">
-            <Button variant="outline" size="lg" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
+            <Button variant="outline" size="lg" className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white">
               <Download className="w-5 h-5 mr-2" />
               Descargar guía completa (PDF)
             </Button>
@@ -174,12 +174,12 @@ const Calidades = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contacto">
-              <Button size="lg" className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white w-full sm:w-auto">
+              <Button size="lg" className="bg-[#260801] hover:bg-[#1e4a1e] text-white w-full sm:w-auto">
                 Hablar con un asesor
               </Button>
             </Link>
             <Link to="/productos">
-              <Button size="lg" variant="outline" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white w-full sm:w-auto">
                 Ver productos
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>

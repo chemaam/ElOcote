@@ -16,7 +16,7 @@ const ProductoDetalle = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-[#d7ba92] mb-4">Producto no encontrado</h1>
           <Link to="/productos">
-            <Button className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white">
+            <Button className="bg-[#260801] hover:bg-[#1e4a1e] text-white">
               Ver todos los productos
             </Button>
           </Link>
@@ -52,7 +52,7 @@ const ProductoDetalle = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link to="/cotizar">
-                <Button size="lg" className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white w-full sm:w-auto">
+                <Button size="lg" className="bg-[#260801] hover:bg-[#1e4a1e] text-white w-full sm:w-auto">
                   Solicitar cotización
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -61,7 +61,7 @@ const ProductoDetalle = () => {
                 size="lg"
                 variant="outline"
                 onClick={handleWhatsAppQuote}
-                className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white w-full sm:w-auto"
+                className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white w-full sm:w-auto"
               >
                 WhatsApp
               </Button>
@@ -72,7 +72,7 @@ const ProductoDetalle = () => {
               <ul className="space-y-3">
                 {product.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-[#2A5C2A] flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-[#260801] flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -94,7 +94,7 @@ const ProductoDetalle = () => {
           <h2 className="text-3xl font-bold text-[#d7ba92] mb-8">Aplicaciones</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {product.applications.map((application, idx) => (
-              <Card key={idx} className="border-2 hover:border-[#2A5C2A] transition-colors duration-200">
+              <Card key={idx} className="border-2 hover:border-[#260801] transition-colors duration-200">
                 <CardContent className="p-6">
                   <p className="text-center font-medium text-gray-700">{application}</p>
                 </CardContent>
@@ -108,13 +108,13 @@ const ProductoDetalle = () => {
           <h2 className="text-3xl font-bold text-[#d7ba92] mb-8">Clases disponibles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {product.classes.map((grade, idx) => (
-              <Card key={idx} className="border-2 border-[#2A5C2A] bg-gradient-to-br from-white to-[#f8f9f8]">
+              <Card key={idx} className="border-2 border-[#260801] bg-gradient-to-br from-white to-[#f8f9f8]">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-[#2A5C2A] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-[#260801] rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{grade}</span>
                   </div>
                   <p className="text-sm text-[#40210d]">
-                    <Link to="/calidades" className="text-[#2A5C2A] hover:underline">
+                    <Link to="/calidades" className="text-[#260801] hover:underline">
                       Ver detalles de esta clase
                     </Link>
                   </p>
@@ -124,7 +124,7 @@ const ProductoDetalle = () => {
           </div>
           <div className="mt-8 text-center">
             <Link to="/calidades">
-              <Button variant="outline" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
+              <Button variant="outline" className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white">
                 Ver guía completa de calidades
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
@@ -139,7 +139,7 @@ const ProductoDetalle = () => {
             <CardContent className="p-8">
               <div className="grid md:grid-cols-3 gap-8">
                 <div>
-                  <h3 className="font-semibold text-[#2A5C2A] mb-4">Grosor</h3>
+                  <h3 className="font-semibold text-[#260801] mb-4">Grosor</h3>
                   <ul className="space-y-2">
                     {product.dimensions.thickness.map((dim, idx) => (
                       <li key={idx} className="text-gray-700">• {dim}</li>
@@ -147,7 +147,7 @@ const ProductoDetalle = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#2A5C2A] mb-4">Ancho</h3>
+                  <h3 className="font-semibold text-[#260801] mb-4">Ancho</h3>
                   <ul className="space-y-2">
                     {product.dimensions.width.map((dim, idx) => (
                       <li key={idx} className="text-gray-700">• {dim}</li>
@@ -155,7 +155,7 @@ const ProductoDetalle = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#2A5C2A] mb-4">Largo</h3>
+                  <h3 className="font-semibold text-[#260801] mb-4">Largo</h3>
                   <ul className="space-y-2">
                     {product.dimensions.length.map((dim, idx) => (
                       <li key={idx} className="text-gray-700">• {dim}</li>
@@ -167,7 +167,7 @@ const ProductoDetalle = () => {
                 <p className="text-sm text-[#40210d] mb-4">
                   <span className="font-semibold text-[#d7ba92]">Nota:</span> Dimensiones personalizadas disponibles bajo pedido. Tiempos de entrega pueden variar.
                 </p>
-                <Button variant="outline" size="sm" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
+                <Button variant="outline" size="sm" className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white">
                   <Download className="w-4 h-4 mr-2" />
                   Descargar tabla de medidas (PDF)
                 </Button>
@@ -181,7 +181,7 @@ const ProductoDetalle = () => {
           <h2 className="text-3xl font-bold text-[#d7ba92] mb-8">Estados disponibles</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {product.conditions.map((condition, idx) => (
-              <Card key={idx} className="border-2 hover:border-[#2A5C2A] transition-colors duration-200">
+              <Card key={idx} className="border-2 hover:border-[#260801] transition-colors duration-200">
                 <CardContent className="p-6 text-center">
                   <p className="font-semibold text-gray-700">{condition}</p>
                 </CardContent>
@@ -192,14 +192,14 @@ const ProductoDetalle = () => {
             <p className="text-gray-700 leading-relaxed">
               <span className="font-semibold text-[#d7ba92]">Recomendación:</span> Para mueblería y carpintería fina, recomendamos madera estufada. Para construcción y tarimas, madera seca al aire o verde según tu aplicación.
             </p>
-            <Link to="/blog/secado-vs-verde" className="text-[#2A5C2A] hover:underline text-sm mt-2 inline-block">
+            <Link to="/blog/secado-vs-verde" className="text-[#260801] hover:underline text-sm mt-2 inline-block">
               Leer más: Madera seca vs verde →
             </Link>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="bg-[#2A5C2A] rounded-2xl p-12 text-center">
+        <section className="bg-[#260801] rounded-2xl p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             ¿Listo para ordenar?
           </h2>
@@ -208,7 +208,7 @@ const ProductoDetalle = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/cotizar">
-              <Button size="lg" className="bg-white text-[#2A5C2A] hover:bg-gray-100 w-full sm:w-auto">
+              <Button size="lg" className="bg-white text-[#260801] hover:bg-gray-100 w-full sm:w-auto">
                 Ir a cotizador
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -217,7 +217,7 @@ const ProductoDetalle = () => {
               size="lg"
               variant="outline"
               onClick={handleWhatsAppQuote}
-              className="border-2 border-white text-white hover:bg-white hover:text-[#2A5C2A] w-full sm:w-auto"
+              className="border-2 border-white text-white hover:bg-white hover:text-[#260801] w-full sm:w-auto"
             >
               Contactar por WhatsApp
             </Button>

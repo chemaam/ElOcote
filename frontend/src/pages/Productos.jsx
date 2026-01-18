@@ -35,7 +35,7 @@ const Productos = () => {
               <TabsTrigger
                 key={tab.id}
                 value={tab.id}
-                className="data-[state=active]:bg-[#2A5C2A] data-[state=active]:text-white text-sm md:text-base py-3 rounded-md transition-all duration-200"
+                className="data-[state=active]:bg-[#260801] data-[state=active]:text-white text-sm md:text-base py-3 rounded-md transition-all duration-200"
               >
                 {tab.name}
               </TabsTrigger>
@@ -62,7 +62,7 @@ const Productos = () => {
               {/* Grid de productos */}
               <div className="grid md:grid-cols-2 gap-6">
                 {tab.products.map((product, index) => (
-                  <Card key={index} className="border-2 hover:border-[#2A5C2A] transition-colors duration-300 overflow-hidden">
+                  <Card key={index} className="border-2 hover:border-[#260801] transition-colors duration-300 overflow-hidden">
                     <CardContent className="p-6 space-y-4 relative">
                       {/* Imagen de fondo con opacidad */}
                       <div 
@@ -86,11 +86,11 @@ const Productos = () => {
                         {/* Usos comunes */}
                         {product.uses && product.uses.length > 0 && (
                           <div>
-                            <h4 className="font-semibold text-[#2A5C2A] text-sm mb-2">Usos comunes:</h4>
+                            <h4 className="font-semibold text-[#260801] text-sm mb-2">Usos comunes:</h4>
                             <ul className="space-y-1">
                               {product.uses.map((use, idx) => (
                                 <li key={idx} className="text-sm text-[#40210d] flex items-start space-x-2">
-                                  <span className="text-[#2A5C2A] mt-1">•</span>
+                                  <span className="text-[#260801] mt-1">•</span>
                                   <span>{use}</span>
                                 </li>
                               ))}
@@ -118,7 +118,7 @@ const Productos = () => {
               </div>
 
               {/* CTA por tab */}
-              <Card className="bg-[#2A5C2A] border-none mt-8">
+              <Card className="bg-[#260801] border-none mt-8">
                 <CardContent className="p-8 text-center">
                   <h3 className="text-2xl font-bold text-white mb-4">
                     ¿Interesado en estos productos?
@@ -129,7 +129,7 @@ const Productos = () => {
                   <Button
                     size="lg"
                     onClick={handleWhatsAppClick}
-                    className="bg-white text-[#2A5C2A] hover:bg-gray-100"
+                    className="bg-white text-[#260801] hover:bg-gray-100"
                   >
                     <MessageCircle className="mr-2 w-5 h-5" />
                     Cotizar por WhatsApp
@@ -158,7 +158,7 @@ const Productos = () => {
               Contactar por WhatsApp
             </Button>
             <Link to="/contacto">
-              <Button size="lg" variant="outline" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
+              <Button size="lg" variant="outline" className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white">
                 Ir a Contacto
               </Button>
             </Link>

@@ -23,7 +23,7 @@ const Blog = () => {
 
         {/* Featured Post */}
         {blogPosts.length > 0 && (
-          <Card className="mb-16 shadow-xl border-2 hover:border-[#2A5C2A] transition-colors duration-300 group">
+          <Card className="mb-16 shadow-xl border-2 hover:border-[#260801] transition-colors duration-300 group">
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="aspect-[16/9] lg:aspect-auto bg-gray-200 overflow-hidden">
@@ -34,10 +34,10 @@ const Blog = () => {
                   />
                 </div>
                 <div className="p-12 flex flex-col justify-center">
-                  <div className="inline-block px-3 py-1 bg-[#2A5C2A] text-white text-xs font-semibold rounded-full mb-4 w-fit">
+                  <div className="inline-block px-3 py-1 bg-[#260801] text-white text-xs font-semibold rounded-full mb-4 w-fit">
                     {blogPosts[0].category}
                   </div>
-                  <h2 className="text-3xl font-bold text-[#d7ba92] mb-4 group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h2 className="text-3xl font-bold text-[#d7ba92] mb-4 group-hover:text-[#260801] transition-colors duration-200">
                     {blogPosts[0].title}
                   </h2>
                   <p className="text-[#40210d] leading-relaxed mb-6">
@@ -54,7 +54,7 @@ const Blog = () => {
                     </div>
                   </div>
                   <Link to={`/blog/${blogPosts[0].slug}`}>
-                    <Button className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white">
+                    <Button className="bg-[#260801] hover:bg-[#1e4a1e] text-white">
                       Leer artículo completo
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -68,7 +68,7 @@ const Blog = () => {
         {/* Other Posts */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.slice(1).map((post) => (
-            <Card key={post.id} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#2A5C2A]">
+            <Card key={post.id} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#260801]">
               <CardContent className="p-0">
                 <div className="aspect-[16/9] bg-gray-200 overflow-hidden">
                   <img
@@ -78,10 +78,10 @@ const Blog = () => {
                   />
                 </div>
                 <div className="p-6 space-y-4">
-                  <div className="inline-block px-3 py-1 bg-[#f8f9f8] text-[#2A5C2A] text-xs font-semibold rounded-full">
+                  <div className="inline-block px-3 py-1 bg-[#f8f9f8] text-[#260801] text-xs font-semibold rounded-full">
                     {post.category}
                   </div>
-                  <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#260801] transition-colors duration-200">
                     {post.title}
                   </h3>
                   <p className="text-sm text-[#40210d] leading-relaxed">
@@ -98,7 +98,7 @@ const Blog = () => {
                     </div>
                   </div>
                   <Link to={`/blog/${post.slug}`}>
-                    <Button variant="ghost" className="w-full text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white group-hover:bg-[#2A5C2A] group-hover:text-white transition-colors duration-200">
+                    <Button variant="ghost" className="w-full text-[#260801] hover:bg-[#260801] hover:text-white group-hover:bg-[#260801] group-hover:text-white transition-colors duration-200">
                       Leer más
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>

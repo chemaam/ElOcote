@@ -16,7 +16,7 @@ const BlogPost = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-[#d7ba92] mb-4">Artículo no encontrado</h1>
           <Link to="/blog">
-            <Button className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white">
+            <Button className="bg-[#260801] hover:bg-[#1e4a1e] text-white">
               Volver al blog
             </Button>
           </Link>
@@ -42,7 +42,7 @@ const BlogPost = () => {
         {/* Post Header */}
         <article>
           <div className="mb-8">
-            <div className="inline-block px-4 py-2 bg-[#2A5C2A] text-white text-sm font-semibold rounded-full mb-6">
+            <div className="inline-block px-4 py-2 bg-[#260801] text-white text-sm font-semibold rounded-full mb-6">
               {post.category}
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6 leading-tight">
@@ -98,7 +98,7 @@ const BlogPost = () => {
         </article>
 
         {/* CTA Card */}
-        <Card className="my-16 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0] border-2 border-[#2A5C2A]/20">
+        <Card className="my-16 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0] border-2 border-[#260801]/20">
           <CardContent className="p-8 text-center">
             <h3 className="text-2xl font-bold text-[#d7ba92] mb-4">
               ¿Tienes preguntas sobre madera de pino?
@@ -108,12 +108,12 @@ const BlogPost = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contacto">
-                <Button size="lg" className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white w-full sm:w-auto">
+                <Button size="lg" className="bg-[#260801] hover:bg-[#1e4a1e] text-white w-full sm:w-auto">
                   Contactar
                 </Button>
               </Link>
               <Link to="/cotizar">
-                <Button size="lg" variant="outline" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white w-full sm:w-auto">
                   Solicitar cotización
                 </Button>
               </Link>
@@ -125,13 +125,13 @@ const BlogPost = () => {
         <div className="grid md:grid-cols-2 gap-6 mt-16 pt-8 border-t border-gray-200">
           {previousPost ? (
             <Link to={`/blog/${previousPost.slug}`}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-2 hover:border-[#2A5C2A] group">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-2 hover:border-[#260801] group">
                 <CardContent className="p-6">
-                  <div className="flex items-center space-x-2 text-[#2A5C2A] mb-3">
+                  <div className="flex items-center space-x-2 text-[#260801] mb-3">
                     <ArrowLeft className="w-4 h-4" />
                     <span className="text-sm font-semibold">Artículo anterior</span>
                   </div>
-                  <h4 className="text-lg font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h4 className="text-lg font-bold text-[#d7ba92] group-hover:text-[#260801] transition-colors duration-200">
                     {previousPost.title}
                   </h4>
                 </CardContent>
@@ -143,13 +143,13 @@ const BlogPost = () => {
 
           {nextPost && (
             <Link to={`/blog/${nextPost.slug}`} className={!previousPost ? 'md:col-start-2' : ''}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-2 hover:border-[#2A5C2A] group">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-2 hover:border-[#260801] group">
                 <CardContent className="p-6 text-right">
-                  <div className="flex items-center justify-end space-x-2 text-[#2A5C2A] mb-3">
+                  <div className="flex items-center justify-end space-x-2 text-[#260801] mb-3">
                     <span className="text-sm font-semibold">Siguiente artículo</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
-                  <h4 className="text-lg font-bold text-[#d7ba92] group-hover:text-[#2A5C2A] transition-colors duration-200">
+                  <h4 className="text-lg font-bold text-[#d7ba92] group-hover:text-[#260801] transition-colors duration-200">
                     {nextPost.title}
                   </h4>
                 </CardContent>
@@ -161,7 +161,7 @@ const BlogPost = () => {
         {/* Back to Blog */}
         <div className="mt-12 text-center">
           <Link to="/blog">
-            <Button variant="outline" className="border-[#2A5C2A] text-[#2A5C2A] hover:bg-[#2A5C2A] hover:text-white">
+            <Button variant="outline" className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white">
               <ArrowLeft className="mr-2 w-4 h-4" />
               Volver al blog
             </Button>

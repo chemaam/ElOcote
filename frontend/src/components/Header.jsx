@@ -75,7 +75,7 @@ const Header = () => {
             <Link to="/cotizar">
               <Button
                 size="sm"
-                className="bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white transition-colors duration-200"
+                className="bg-[#260801] hover:bg-[#1e4a1e] text-white transition-colors duration-200"
               >
                 Cotizar ahora
               </Button>
@@ -121,7 +121,7 @@ const Header = () => {
                 WhatsApp
               </Button>
               <Link to="/cotizar" className="block" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button size="sm" className="w-full bg-[#2A5C2A] hover:bg-[#1e4a1e] text-white">
+                <Button size="sm" className="w-full bg-[#260801] hover:bg-[#1e4a1e] text-white">
                   Cotizar ahora
                 </Button>
               </Link>
