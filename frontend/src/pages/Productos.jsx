@@ -68,7 +68,7 @@ const Productos = () => {
                       <div 
                         className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
                         style={{
-                          backgroundImage: 'url(https://customer-assets.emergentagent.com/job_72e09283-43db-4641-b5ee-4dc83dfcd7b6/artifacts/wvuxexzc_foto_3_polines_cuadrados.png)'
+                          backgroundImage: 'url(https://github.com/chemaam/ElOcote/blob/main/frontend/src/media/ddc5098b-85c9-40a2-a90e-e851d642b866.png)'
                         }}
                       />
                       
