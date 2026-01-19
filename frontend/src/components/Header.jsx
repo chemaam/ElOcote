@@ -53,7 +53,7 @@ const Header = () => {
                 className={`text-sm font-medium transition-colors duration-200 ${
                   location.pathname === link.path
                     ? 'text-[#260801]'
-                    : 'text-[#D9C7B8] hover:text-[#260801]'
+                    : 'text-[#40200E] hover:text-[#260801]'
                 }`}
               >
                 {link.name}
