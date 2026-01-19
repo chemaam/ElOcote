@@ -168,39 +168,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#d7ba92] mb-4">
-              Lo que dicen nuestros clientes
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <Card key={testimonial.id} className="border-2 hover:border-[#260801] transition-colors duration-300">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-center space-x-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-[#260801] text-xl">★</span>
-                    ))}
-                  </div>
-                  <p className="text-[#40210d] italic leading-relaxed">
-                    "{testimonial.content}"
-                  </p>
-                  <div className="pt-4 border-t border-gray-100">
-                    <p className="font-semibold text-[#d7ba92]">{testimonial.name}</p>
-                    <p className="text-sm text-gray-500">{testimonial.position}</p>
-                    <p className="text-sm text-[#260801]">{testimonial.company}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-[#260801]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
