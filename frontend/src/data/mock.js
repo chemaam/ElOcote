@@ -4,7 +4,7 @@ export const businessInfo = {
   name: 'Maderas "El Ocote"',
   phone: '+52 871 393 7770',
   whatsapp: 'https://wa.me/528713937770',
-  email: 'contacto@elocote.mx',
+  email: 'ventaso@maderaselocote.com',
   address: {
     street: 'Calle Carr. a San Pedro 773',
     neighborhood: 'Ejido Ana',
