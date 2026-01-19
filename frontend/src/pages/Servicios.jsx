@@ -39,7 +39,7 @@ const Servicios = () => {
             return (
               <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#260801]">
                 <CardContent className="p-8 space-y-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#260801] to-[#1e4a1e] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#260801] to-[#d7ba92] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {IconComponent && <IconComponent className="w-8 h-8 text-white" />}
                   </div>
                   <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#260801] transition-colors duration-200">
