@@ -32,7 +32,7 @@ const Nosotros = () => {
             </div>
             <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800"
+                src="https://raw.githubusercontent.com/chemaam/ElOcote/refs/heads/main/frontend/src/media/templete.jpg?w=800"
                 alt="Maderas El Ocote"
                 className="w-full h-full object-cover"
               />
