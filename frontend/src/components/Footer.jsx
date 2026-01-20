@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Facebook} from 'lucide-react';
 import { businessInfo } from '../data/mock';
 
 const Footer = () => {
@@ -31,22 +31,7 @@ const Footer = () => {
               >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a
-                href={businessInfo.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#40210d] hover:text-[#260801] transition-colors duration-200"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href={businessInfo.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#40210d] hover:text-[#260801] transition-colors duration-200"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
+              
             </div>
           </div>
 

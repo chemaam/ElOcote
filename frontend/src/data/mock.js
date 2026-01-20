@@ -23,8 +23,6 @@ export const businessInfo = {
   },
   social: {
     facebook: '#',
-    instagram: '#',
-    linkedin: '#'
   }
 };
 
