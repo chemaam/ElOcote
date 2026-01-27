@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "./components/ui/sonner";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -17,7 +17,7 @@ import Contacto from "./pages/Contacto";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <main>
           <Routes>
@@ -32,7 +32,7 @@ function App() {
         <Footer />
         <WhatsAppButton />
         <Toaster position="top-center" richColors />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

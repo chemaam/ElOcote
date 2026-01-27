@@ -867,7 +867,7 @@ const babelMetadataPlugin = ({ types: t }) => {
             [
               "Routes",
               "Switch",
-              "BrowserRouter",
+              "HashRouter",
               "Router",
               "MemoryRouter",
               "HashRouter",
