@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Scissors, ClipboardCheck, Package, Truck, MessageCircle } from 'lucide-react';
-import { Card, CardContent } from '../components/ui/card';
+import { Scissors, ClipboardCheck, Package, Truck, MessageCircle, ArrowRight, Ruler } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import Breadcrumbs from '../components/Breadcrumbs';
 import { services, businessInfo } from '../data/mock';
+import serviciosImage from '../media/servicios.png';
+
+const useScrollReveal = () => {
+  const ref = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-up');
+            entry.target.classList.remove('scroll-hidden');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    const elements = ref.current?.querySelectorAll('.scroll-hidden');
+    elements?.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+  return ref;
+};
 
 const iconMap = {
   scissors: Scissors,
@@ -14,71 +35,99 @@ const iconMap = {
 };
 
 const Servicios = () => {
+  const sectionRef = useScrollReveal();
+
   const handleWhatsAppClick = () => {
     window.open(businessInfo.whatsapp, '_blank');
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <Breadcrumbs items={[{ label: 'Servicios' }]} />
-
-        <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
-            Nuestros servicios
-          </h1>
-          <p className="text-xl text-[#40210d] max-w-3xl leading-relaxed">
-            Servicios de corte, preparación y entrega para facilitar tu operación.
-          </p>
+    <div ref={sectionRef} className="min-h-screen">
+      {/* Hero */}
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={serviciosImage}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-wood-900/95 via-wood-900/80 to-wood-900/40" />
         </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-32 w-full">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold text-wood-300 uppercase tracking-widest mb-4 animate-fade-in">Servicios</p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-bold text-white leading-[1.1] tracking-tight mb-6 animate-fade-up">
+              Más que solo <span className="text-wood-300">madera</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-white/70 leading-relaxed max-w-lg animate-fade-up" style={{ animationDelay: '200ms' }}>
+              Servicios de corte, preparación y entrega para facilitar tu operación.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {services.map((service) => {
-            const IconComponent = iconMap[service.icon];
-            return (
-              <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-[#260801]">
-                <CardContent className="p-8 space-y-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#260801] to-[#d7ba92] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {IconComponent && <IconComponent className="w-8 h-8 text-white" />}
+      {/* Services Grid */}
+      <section className="py-24 sm:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {services.map((service, index) => {
+              const IconComponent = iconMap[service.icon] || Ruler;
+              return (
+                <div
+                  key={service.id}
+                  className="scroll-hidden group p-8 sm:p-10 rounded-2xl border border-wood-200/60 hover:border-wood-300 bg-white hover:bg-wood-50/50 transition-all duration-500"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="w-14 h-14 rounded-xl bg-wood-100 flex items-center justify-center mb-6 group-hover:bg-wood-300 group-hover:scale-110 transition-all duration-500">
+                    <IconComponent className="w-7 h-7 text-wood-900" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#d7ba92] group-hover:text-[#260801] transition-colors duration-200">
+                  <h3 className="text-xl font-heading font-bold text-wood-900 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-[#40210d] leading-relaxed">
+                  <p className="text-wood-600 leading-relaxed">
                     {service.description}
                   </p>
-                </CardContent>
-              </Card>
-            );
-          })}
+                </div>
+              );
+            })}
+          </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="bg-[#260801] rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+      {/* CTA Section */}
+      <section className="relative py-24 sm:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-wood-900" />
+        <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${serviciosImage})` }} />
+
+        <div className="relative z-10 max-w-3xl mx-auto px-5 sm:px-6 lg:px-8 text-center scroll-hidden">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight mb-6">
             ¿Necesitas alguno de estos servicios?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/60 mb-10 max-w-xl mx-auto">
             Contáctanos y con gusto te ayudamos con tu proyecto
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
               onClick={handleWhatsAppClick}
-              className="bg-white text-[#260801] hover:bg-gray-100 w-full sm:w-auto"
+              className="bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full px-8 py-6 text-base shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300"
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
+              <MessageCircle className="mr-2 w-5 h-5" />
               Cotizar por WhatsApp
             </Button>
             <Link to="/contacto">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#260801] w-full sm:w-auto">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-white/30 text-white hover:bg-white hover:text-wood-900 rounded-full px-8 py-6 text-base transition-all duration-300 w-full sm:w-auto"
+              >
                 Contactar
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };

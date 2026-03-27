@@ -20,9 +20,14 @@ html {
   color: white;
 }
 
+/* Heading font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
 /* Custom prose styles for blog content */
 .prose h2 {
-  color: #d7ba92;
+  color: #260801;
   font-size: 1.875rem;
   font-weight: 700;
   margin-top: 2rem;
@@ -30,7 +35,7 @@ html {
 }
 
 .prose h3 {
-  color: #d7ba92;
+  color: #260801;
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 1.5rem;
@@ -60,10 +65,25 @@ html {
 }
 
 .prose a:hover {
-  color: #1e4a1e;
+  color: #d7ba92;
 }
 
 .prose strong {
-  color: #d7ba92;
+  color: #260801;
   font-weight: 600;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #260801 0%, #5a2d0c 50%, #d7ba92 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

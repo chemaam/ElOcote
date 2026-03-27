@@ -1,170 +1,198 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, AlertCircle } from 'lucide-react';
+import { MessageCircle, AlertCircle, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { Card, CardContent } from '../components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Alert, AlertDescription } from '../components/ui/alert';
-import Breadcrumbs from '../components/Breadcrumbs';
 import { productTabs, businessInfo } from '../data/mock';
+import productosImage from '../media/Productos.png';
+
+const useScrollReveal = () => {
+  const ref = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-up');
+            entry.target.classList.remove('scroll-hidden');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    const elements = ref.current?.querySelectorAll('.scroll-hidden');
+    elements?.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+  return ref;
+};
 
 const Productos = () => {
+  const sectionRef = useScrollReveal();
+
   const handleWhatsAppClick = () => {
     const message = 'Hola, me gustaría solicitar una cotización de productos.';
     window.open(`${businessInfo.whatsapp}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <Breadcrumbs items={[{ label: 'Productos' }]} />
-
-        <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#d7ba92] mb-6">
-            Nuestros productos
-          </h1>
-          <p className="text-xl text-[#40210d] max-w-3xl leading-relaxed">
-            Madera para construcción, carpintería, industria y tarimas. Selecciona la categoría para ver los detalles.
-          </p>
+    <div ref={sectionRef} className="min-h-screen">
+      {/* Hero */}
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={productosImage}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-wood-900/95 via-wood-900/80 to-wood-900/40" />
         </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-32 w-full">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold text-wood-300 uppercase tracking-widest mb-4 animate-fade-in">Catálogo</p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-bold text-white leading-[1.1] tracking-tight mb-6 animate-fade-up">
+              Nuestros <span className="text-wood-300">productos</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-white/70 leading-relaxed max-w-lg animate-fade-up" style={{ animationDelay: '200ms' }}>
+              Madera para construcción, carpintería, industria y tarimas. Selecciona la categoría para ver los detalles.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        {/* Tabs de productos */}
-        <Tabs defaultValue="construccion" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 h-auto gap-2 bg-gray-100 p-2 rounded-lg mb-8">
+      {/* Tabs de productos */}
+      <section className="py-24 sm:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <Tabs defaultValue="construccion" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 h-auto gap-2 bg-wood-50 p-2 rounded-xl mb-12">
+              {productTabs.map((tab) => (
+                <TabsTrigger
+                  key={tab.id}
+                  value={tab.id}
+                  className="data-[state=active]:bg-wood-900 data-[state=active]:text-white text-sm md:text-base py-3.5 rounded-lg transition-all duration-300 font-medium text-wood-600"
+                >
+                  {tab.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
             {productTabs.map((tab) => (
-              <TabsTrigger
-                key={tab.id}
-                value={tab.id}
-                className="data-[state=active]:bg-[#260801] data-[state=active]:text-white text-sm md:text-base py-3 rounded-md transition-all duration-200"
-              >
-                {tab.name}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+              <TabsContent key={tab.id} value={tab.id} className="space-y-8">
+                {/* Intro del tab */}
+                <div className="bg-wood-50 p-6 rounded-xl border border-wood-200/60">
+                  <p className="text-lg text-wood-700">{tab.intro}</p>
+                </div>
 
-          {productTabs.map((tab) => (
-            <TabsContent key={tab.id} value={tab.id} className="space-y-8">
-              {/* Intro del tab */}
-              <div className="bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0] p-6 rounded-lg">
-                <p className="text-lg text-gray-700">{tab.intro}</p>
-              </div>
+                {/* Aviso legal para Tarimas */}
+                {tab.legalNotice && (
+                  <Alert className="border border-amber-300 bg-amber-50 rounded-xl">
+                    <AlertCircle className="h-5 w-5 text-amber-600" />
+                    <AlertDescription className="text-amber-900 font-medium">
+                      {tab.legalNotice}
+                    </AlertDescription>
+                  </Alert>
+                )}
 
-              {/* Aviso legal para Tarimas */}
-              {tab.legalNotice && (
-                <Alert className="border-2 border-amber-500 bg-amber-50">
-                  <AlertCircle className="h-5 w-5 text-amber-600" />
-                  <AlertDescription className="text-amber-900 font-medium">
-                    {tab.legalNotice}
-                  </AlertDescription>
-                </Alert>
-              )}
+                {/* Grid de productos */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  {tab.products.map((product, index) => (
+                    <div
+                      key={index}
+                      className="group p-7 rounded-2xl border border-wood-200/60 hover:border-wood-300 bg-white hover:bg-wood-50/50 transition-all duration-500 space-y-4"
+                    >
+                      <h3 className="text-xl font-heading font-bold text-wood-900">
+                        {product.title}
+                      </h3>
+                      <p className="text-wood-600 leading-relaxed">
+                        {product.description}
+                      </p>
 
-              {/* Grid de productos */}
-              <div className="grid md:grid-cols-2 gap-6">
-                {tab.products.map((product, index) => (
-                  <Card key={index} className="border-2 hover:border-[#260801] transition-colors duration-300 overflow-hidden">
-                    <CardContent className="p-6 space-y-4 relative">
-                      {/* Imagen de fondo con opacidad */}
-                      <div 
-                        className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none"
-                        style={{
-                          backgroundImage: 'url(https://github.com/chemaam/ElOcote/blob/main/frontend/src/media/ddc5098b-85c9-40a2-a90e-e851d642b866.png)'
-                        }}
-                      />
-                      
-                      {/* Contenido sobre la imagen */}
-                      <div className="relative z-10">
+                      {product.uses && product.uses.length > 0 && (
                         <div>
-                          <h3 className="text-xl font-bold text-[#d7ba92] mb-3">
-                            {product.title}
-                          </h3>
-                          <p className="text-[#40210d] leading-relaxed mb-4">
-                            {product.description}
-                          </p>
+                          <h4 className="font-semibold text-wood-900 text-sm mb-2">Usos comunes:</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {product.uses.map((use, idx) => (
+                              <span key={idx} className="text-xs px-3 py-1.5 rounded-full bg-wood-100 text-wood-700 font-medium">
+                                {use}
+                              </span>
+                            ))}
+                          </div>
                         </div>
+                      )}
 
-                        {/* Usos comunes */}
-                        {product.uses && product.uses.length > 0 && (
-                          <div>
-                            <h4 className="font-semibold text-[#260801] text-sm mb-2">Usos comunes:</h4>
-                            <ul className="space-y-1">
-                              {product.uses.map((use, idx) => (
-                                <li key={idx} className="text-sm text-[#40210d] flex items-start space-x-2">
-                                  <span className="text-[#260801] mt-1">•</span>
-                                  <span>{use}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
+                      {product.specs && (
+                        <div className="bg-wood-50 p-3 rounded-lg border border-wood-200/60">
+                          <p className="text-sm text-wood-700">{product.specs}</p>
+                        </div>
+                      )}
 
-                        {/* Especificaciones */}
-                        {product.specs && (
-                          <div className="bg-[#f8f9f8] p-3 rounded-md">
-                            <p className="text-sm text-gray-700">{product.specs}</p>
-                          </div>
-                        )}
+                      {product.availability && (
+                        <div className="bg-amber-50 border border-amber-200 p-3 rounded-lg">
+                          <p className="text-xs text-amber-900 font-medium">{product.availability}</p>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
 
-                        {/* Aviso de disponibilidad */}
-                        {product.availability && (
-                          <div className="bg-amber-50 border border-amber-200 p-3 rounded-md">
-                            <p className="text-xs text-amber-900 font-medium">{product.availability}</p>
-                          </div>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                {/* CTA por tab */}
+                <div className="relative rounded-2xl overflow-hidden p-10 text-center">
+                  <div className="absolute inset-0 bg-wood-900" />
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-heading font-bold text-white mb-4">
+                      ¿Interesado en estos productos?
+                    </h3>
+                    <p className="text-white/60 mb-6">
+                      Solicita una cotización personalizada por WhatsApp
+                    </p>
+                    <Button
+                      size="lg"
+                      onClick={handleWhatsAppClick}
+                      className="bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full px-8 py-6 text-base shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300"
+                    >
+                      <MessageCircle className="mr-2 w-5 h-5" />
+                      Cotizar por WhatsApp
+                    </Button>
+                  </div>
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
 
-              {/* CTA por tab */}
-              <Card className="bg-[#260801] border-none mt-8">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    ¿Interesado en estos productos?
-                  </h3>
-                  <p className="text-white/90 mb-6">
-                    Solicita una cotización personalizada por WhatsApp
-                  </p>
+          {/* Bottom CTA */}
+          <div className="mt-20 scroll-hidden">
+            <div className="relative rounded-2xl overflow-hidden p-12 text-center">
+              <div className="absolute inset-0 bg-wood-50" />
+              <div className="relative z-10">
+                <h2 className="text-3xl sm:text-4xl font-heading font-bold text-wood-900 mb-4">
+                  ¿No encuentras lo que buscas?
+                </h2>
+                <p className="text-lg text-wood-600 mb-8 max-w-2xl mx-auto">
+                  Contáctanos y con gusto te ayudamos a encontrar la solución ideal para tu proyecto
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     size="lg"
                     onClick={handleWhatsAppClick}
-                    className="bg-white text-[#260801] hover:bg-gray-100"
+                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full px-8 py-6 text-base shadow-lg shadow-green-500/25 transition-all duration-300"
                   >
                     <MessageCircle className="mr-2 w-5 h-5" />
-                    Cotizar por WhatsApp
+                    Contactar por WhatsApp
                   </Button>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          ))}
-        </Tabs>
-
-        {/* Bottom CTA general */}
-        <div className="mt-20 bg-gradient-to-br from-[#f8f9f8] to-[#f0f4f0] rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-[#d7ba92] mb-4">
-            ¿No encuentras lo que buscas?
-          </h2>
-          <p className="text-lg text-[#40210d] mb-8 max-w-2xl mx-auto">
-            Contáctanos y con gusto te ayudamos a encontrar la solución ideal para tu proyecto
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              onClick={handleWhatsAppClick}
-              className="bg-[#25D366] hover:bg-[#20BA5A] text-white"
-            >
-              <MessageCircle className="mr-2 w-5 h-5" />
-              Contactar por WhatsApp
-            </Button>
-            <Link to="/contacto">
-              <Button size="lg" variant="outline" className="border-[#260801] text-[#260801] hover:bg-[#260801] hover:text-white">
-                Ir a Contacto
-              </Button>
-            </Link>
+                  <Link to="/contacto">
+                    <Button size="lg" variant="outline" className="rounded-full border-wood-300 text-wood-900 hover:bg-wood-900 hover:text-white px-8 py-6 text-base transition-all duration-300 w-full sm:w-auto">
+                      Ir a Contacto
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

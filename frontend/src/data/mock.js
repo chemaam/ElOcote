@@ -15,7 +15,7 @@ export const businessInfo = {
     region: 'Comarca Lagunera',
     full: 'Calle Carr. a San Pedro 773, Ejido Ana, 27018 Torreón, Coah., México'
   },
-  mapUrl: 'https://www.google.com/maps/place/Calle+Carr.+a+San+Pedro+773,+Ejido+Ana,+27018+Torre%C3%B3n,+Coah.,+M%C3%A9xico',
+  mapUrl: 'https://maps.app.goo.gl/Mb7196wpGdVnH4ry8',
   schedule: {
     weekdays: 'Lun–Vie 8:00–18:00',
     saturday: 'Sáb 9:00–14:00',
