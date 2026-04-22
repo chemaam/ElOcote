@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MessageCircle, TreePine, Truck, Shield, Ruler, Package, Hammer } from 'lucide-react';
+import { ArrowRight, MessageCircle, TreePine, Truck, Shield, Ruler, Package, Hammer, Scissors, Layers, Check } from 'lucide-react';
 import heroImage from '../media/Inicio.png';
 import { Button } from '../components/ui/button';
 import { businessInfo } from '../data/mock';
@@ -33,6 +33,17 @@ const useScrollReveal = () => {
 
 const Home = () => {
   const sectionRef = useScrollReveal();
+  const parallaxRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (parallaxRef.current) {
+        parallaxRef.current.style.transform = `translateY(${window.scrollY * 0.35}px)`;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleWhatsAppClick = () => {
     window.open(businessInfo.whatsapp, '_blank');
@@ -45,9 +56,11 @@ const Home = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
+            ref={parallaxRef}
             src={heroImage}
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-[120%] object-cover -top-[10%] absolute will-change-transform"
+            style={{ willChange: 'transform' }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-wood-900/95 via-wood-900/80 to-wood-900/40" />
         </div>
@@ -102,7 +115,7 @@ const Home = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 motion-safe:animate-bounce hidden md:block">
           <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1.5">
             <div className="w-1.5 h-3 bg-white/60 rounded-full" />
           </div>
@@ -120,7 +133,7 @@ const Home = () => {
               'Atención personalizada',
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-wood-300/80 text-sm">
-                <div className="w-1.5 h-1.5 rounded-full bg-wood-300/60" />
+                <Check className="w-3.5 h-3.5 text-wood-300/70 flex-shrink-0" />
                 {item}
               </div>
             ))}
@@ -265,20 +278,23 @@ const Home = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
-              { title: 'Cortes a medida', icon: '✂️' },
-              { title: 'Cepillado', icon: '🪵' },
-              { title: 'Cortes especiales', icon: '📐' },
-              { title: 'Preparación de pedido', icon: '📦' },
-              { title: 'Entrega coordinada', icon: '🚛' },
+              { title: 'Cortes a medida', Icon: Scissors },
+              { title: 'Cepillado', Icon: Layers },
+              { title: 'Cortes especiales', Icon: Ruler },
+              { title: 'Preparación de pedido', Icon: Package },
+              { title: 'Entrega coordinada', Icon: Truck },
             ].map((service, index) => (
-              <div
+              <Link
+                to="/servicios"
                 key={index}
-                className="scroll-hidden text-center p-6 rounded-2xl border border-wood-200/60 bg-white hover:border-wood-300 hover:shadow-md transition-all duration-500"
+                className="scroll-hidden text-center p-6 rounded-2xl border border-wood-200/60 bg-white hover:border-wood-300 hover:bg-wood-50/50 hover:shadow-md cursor-pointer transition-all duration-300 group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <span className="text-3xl mb-3 block">{service.icon}</span>
+                <div className="w-12 h-12 rounded-xl bg-wood-100 flex items-center justify-center mx-auto mb-3 group-hover:bg-wood-300 transition-colors duration-300">
+                  <service.Icon className="w-5 h-5 text-wood-900" />
+                </div>
                 <p className="text-sm font-semibold text-wood-900">{service.title}</p>
-              </div>
+              </Link>
             ))}
           </div>
 

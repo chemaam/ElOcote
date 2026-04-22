@@ -192,3 +192,19 @@ code {
 .scroll-hidden {
     opacity: 0;
 }
+
+/* Respect reduced motion: skip all scroll/entry animations */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-hidden {
+        opacity: 1;
+    }
+    .animate-fade-up,
+    .animate-fade-in,
+    .animate-slide-left,
+    .animate-slide-right,
+    .animate-scale-in {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
