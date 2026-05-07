@@ -1,14 +1,91 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="Maderas El Ocote - Venta de madera de pino en Torreón. Construcción, carpintería e industria." />
+        <meta name="theme-color" content="#5c3a1e" />
+
+        <!-- SEO primario -->
+        <title>Maderas El Ocote | Maderería en Torreón, Coahuila</title>
+        <meta name="description" content="Maderería en Torreón, Coahuila. Venta de madera de pino para construcción, carpintería e industria. Cortes a medida, cepillado y entregas en la Comarca Lagunera. Llámanos: (871) 393-7770." />
+        <meta name="keywords" content="madera Torreón, maderería Torreón, maderas Torreón, venta de madera Torreón, maderería en Torreón, madererías Torreón, maderera Torreón, madera pino Torreón, madera Coahuila, maderería periférico Torreón, maderas Comarca Lagunera, cortes de madera, triplay Torreón, tarimas madera, maderas el ocote" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.maderaselocote.com/" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+
+        <!-- Open Graph (Facebook, WhatsApp) -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.maderaselocote.com/" />
+        <meta property="og:title" content="Maderas El Ocote | Maderería en Torreón, Coahuila" />
+        <meta property="og:description" content="Venta de madera de pino para construcción, carpintería e industria en Torreón. Cortes a medida, cepillado y entregas en la Comarca Lagunera." />
+        <meta property="og:locale" content="es_MX" />
+        <meta property="og:site_name" content="Maderas El Ocote" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Maderas El Ocote | Maderería en Torreón, Coahuila" />
+        <meta name="twitter:description" content="Venta de madera de pino para construcción, carpintería e industria en Torreón. Cortes a medida y entregas en la Comarca Lagunera." />
+
+        <!-- JSON-LD: LocalBusiness (SEO local) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.maderaselocote.com",
+          "name": "Maderas El Ocote",
+          "description": "Maderería en Torreón, Coahuila. Venta de madera de pino para construcción, carpintería e industria. Cortes a medida, cepillado y entregas en la Comarca Lagunera.",
+          "url": "https://www.maderaselocote.com",
+          "telephone": "+528713937770",
+          "email": "ventas@maderaselocote.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle Carr. a San Pedro 773",
+            "addressLocality": "Torreón",
+            "addressRegion": "Coahuila",
+            "postalCode": "27018",
+            "addressCountry": "MX"
+          },
+          "hasMap": "https://maps.app.goo.gl/Mb7196wpGdVnH4ry8",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "09:00",
+              "closes": "14:00"
+            }
+          ],
+          "priceRange": "$$",
+          "areaServed": ["Torreón","Gómez Palacio","Lerdo","Comarca Lagunera"],
+          "knowsAbout": ["madera de pino","construcción","carpintería","tarimas","triplay","cortes a medida"]
+        }
+        </script>
+
+        <!-- BrowserRouter: restaurar ruta después del redirect de 404.html -->
+        <script type="text/javascript">
+          (function(l) {
+            if (l.search[1] === '/') {
+              var decoded = l.search.slice(1).split('&').map(function(s) {
+                return s.replace(/~and~/g, '&');
+              });
+              window.history.replaceState(null, null,
+                decoded[0] + (decoded[1] ? '&' + decoded[1].slice(1) : '') + l.hash
+              );
+            }
+          }(window.location));
+        </script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <title>MADERAS EL OCOTE</title>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
         <!--
         These two scripts have been added for the Visual Edits, please do not edit or remove them
@@ -35,7 +112,7 @@
         </script>
     </head>
     <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <noscript>Necesitas habilitar JavaScript para usar esta aplicación.</noscript>
         <div id="root"></div>
         <!--
       This HTML file is a template.

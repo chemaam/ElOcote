@@ -71,7 +71,7 @@ const Home = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8 animate-fade-in">
               <TreePine className="w-4 h-4 text-wood-300" />
-              <span className="text-sm text-wood-200 font-medium">Madereria en Torreón, Coahuila</span>
+              <span className="text-sm text-wood-200 font-medium">Maderería en Torreón · Carr. a San Pedro</span>
             </div>
 
             {/* Heading */}
@@ -128,9 +128,9 @@ const Home = () => {
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 text-center">
             {[
               'Madera de pino certificada',
-              'Entregas en la Comarca Lagunera',
+              'Torreón · Gómez Palacio · Lerdo',
               'Cortes a medida',
-              'Atención personalizada',
+              'Llámanos: (871) 393-7770',
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-wood-300/80 text-sm">
                 <Check className="w-3.5 h-3.5 text-wood-300/70 flex-shrink-0" />

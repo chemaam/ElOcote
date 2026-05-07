@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, MessageCircle, ArrowRight } from 'lucide-react';
+import { Menu, X, MessageCircle, ArrowRight, Phone } from 'lucide-react';
 import { Button } from './ui/button';
 import { businessInfo } from '../data/mock';
 
@@ -89,6 +89,17 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-3">
+              <a
+                href={`tel:${businessInfo.phone}`}
+                className={`flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full transition-all duration-300 ${
+                  isScrolled
+                    ? 'text-wood-900 hover:bg-wood-50'
+                    : 'text-white/90 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <Phone className="w-3.5 h-3.5" />
+                {businessInfo.phone}
+              </a>
               <Button
                 size="sm"
                 onClick={handleWhatsAppClick}
