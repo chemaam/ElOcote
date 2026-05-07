@@ -16,6 +16,7 @@ export const businessInfo = {
     full: 'Calle Carr. a San Pedro 773, Ejido Ana, 27018 Torreón, Coah., México'
   },
   mapUrl: 'https://maps.app.goo.gl/Mb7196wpGdVnH4ry8',
+  reviewUrl: 'https://share.google/Xqo7nZvYhwrAHfXpF',
   schedule: {
     weekdays: 'Lun–Vie 8:00–18:00',
     saturday: 'Sáb 9:00–14:00',
