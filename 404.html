@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Maderas El Ocote</title>
+  <script type="text/javascript">
+    // Trick para que BrowserRouter funcione en GitHub Pages:
+    // Cuando GitHub Pages sirve un 404, este script redirige al root
+    // preservando la ruta como query string para que index.html la restaure.
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1).join('/') + '/?/' +
+      l.pathname.slice(1).replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body></body>
+</html>

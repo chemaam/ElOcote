@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6c633f14.css",
+    "main.js": "/static/js/main.21452e7c.js",
+    "static/media/Contacto.png": "/static/media/Contacto.7eca65c93f5b1ae6bfbf.png",
+    "static/media/Nosotros.jpg": "/static/media/Nosotros.12f8c0152b38667d3ec9.jpg",
+    "static/media/Productos.png": "/static/media/Productos.668a13e5df5879bff9d7.png",
+    "static/media/Inicio.png": "/static/media/Inicio.f80cc9ba4bb252cad95d.png",
+    "static/media/servicios.png": "/static/media/servicios.b6dbc5566ea0477146b2.png",
+    "index.html": "/index.html",
+    "main.6c633f14.css.map": "/static/css/main.6c633f14.css.map",
+    "main.21452e7c.js.map": "/static/js/main.21452e7c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c633f14.css",
+    "static/js/main.21452e7c.js"
+  ]
+}
