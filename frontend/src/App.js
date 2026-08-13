@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "./components/ui/sonner";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -16,24 +17,26 @@ import Contacto from "./pages/Contacto";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/productos" element={<Productos />} />
-            <Route path="/servicios" element={<Servicios />} />
-            <Route path="/nosotros" element={<Nosotros />} />
-            <Route path="/cotizar" element={<Cotizar />} />
-            <Route path="/contacto" element={<Contacto />} />
-          </Routes>
-        </main>
-        <Footer />
-        <WhatsAppButton />
-        <Toaster position="top-center" richColors />
-      </BrowserRouter>
-    </div>
+    <HelmetProvider>
+      <div className="App">
+        <BrowserRouter>
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/productos" element={<Productos />} />
+              <Route path="/servicios" element={<Servicios />} />
+              <Route path="/nosotros" element={<Nosotros />} />
+              <Route path="/cotizar" element={<Cotizar />} />
+              <Route path="/contacto" element={<Contacto />} />
+            </Routes>
+          </main>
+          <Footer />
+          <WhatsAppButton />
+          <Toaster position="top-center" richColors />
+        </BrowserRouter>
+      </div>
+    </HelmetProvider>
   );
 }
 

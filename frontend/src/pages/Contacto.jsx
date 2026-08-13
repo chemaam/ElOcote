@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Mail, Clock, MessageCircle, ExternalLink, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
@@ -92,7 +93,16 @@ const Contacto = () => {
   };
 
   return (
-    <div ref={sectionRef} className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Contacto | Maderas El Ocote - Torreón</title>
+        <meta
+          name="description"
+          content="Contáctanos en Torreón, Coahuila. Teléfono, WhatsApp, correo y ubicación de Maderas El Ocote."
+        />
+        <link rel="canonical" href="https://www.maderaselocote.com/contacto" />
+      </Helmet>
+      <div ref={sectionRef} className="min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -325,6 +335,7 @@ const Contacto = () => {
       </section>
 
     </div>
+    </>
   );
 };
 

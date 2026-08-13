@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Scissors, ClipboardCheck, Package, Truck, MessageCircle, ArrowRight, Ruler } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { services, businessInfo } from '../data/mock';
@@ -42,7 +43,16 @@ const Servicios = () => {
   };
 
   return (
-    <div ref={sectionRef} className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Servicios | Maderas El Ocote - Torreón</title>
+        <meta
+          name="description"
+          content="Cortes a medida, cepillado, cortes longitudinales y transversales, surtido de pedidos y entrega coordinada en Torreón, Gómez Palacio, Lerdo y la Comarca Lagunera."
+        />
+        <link rel="canonical" href="https://www.maderaselocote.com/servicios" />
+      </Helmet>
+      <div ref={sectionRef} className="min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -129,6 +139,7 @@ const Servicios = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

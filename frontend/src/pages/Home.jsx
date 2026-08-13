@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, MessageCircle, TreePine, Truck, Shield, Ruler, Package, Hammer, Scissors, Layers, Check } from 'lucide-react';
 import heroImage from '../media/Inicio.png';
 import { Button } from '../components/ui/button';
@@ -50,7 +51,16 @@ const Home = () => {
   };
 
   return (
-    <div ref={sectionRef} className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Maderas El Ocote | Maderería en Torreón, Coahuila</title>
+        <meta
+          name="description"
+          content="Maderería en Torreón, Coahuila. Venta de madera de pino para construcción, carpintería e industria. Cortes a medida, cepillado y entregas en la Comarca Lagunera. Llámanos: (871) 393-7770."
+        />
+        <link rel="canonical" href="https://www.maderaselocote.com/" />
+      </Helmet>
+      <div ref={sectionRef} className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
@@ -438,6 +448,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

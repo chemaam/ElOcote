@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { MessageCircle, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
@@ -72,7 +73,16 @@ const Cotizar = () => {
   };
 
   return (
-    <div ref={sectionRef} className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Cotiza tu pedido | Maderas El Ocote - Torreón</title>
+        <meta
+          name="description"
+          content="Solicita tu cotización de madera de pino para construcción, carpintería e industria en Torreón, Coahuila. Respuesta por WhatsApp o formulario."
+        />
+        <link rel="canonical" href="https://www.maderaselocote.com/cotizar" />
+      </Helmet>
+      <div ref={sectionRef} className="min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -239,6 +249,7 @@ const Cotizar = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Award, Users, Target, TrendingUp, MessageCircle, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { businessInfo } from '../data/mock';
@@ -39,7 +40,16 @@ const Nosotros = () => {
   };
 
   return (
-    <div ref={sectionRef} className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Nosotros | Maderas El Ocote - Torreón</title>
+        <meta
+          name="description"
+          content="Somos una empresa maderera ubicada en Torreón, Coahuila, dedicada a ofrecer soluciones en madera para construcción, carpintería e industria."
+        />
+        <link rel="canonical" href="https://www.maderaselocote.com/nosotros" />
+      </Helmet>
+      <div ref={sectionRef} className="min-h-screen">
       {/* Hero Section - Full screen like Home */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -227,6 +237,7 @@ const Nosotros = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

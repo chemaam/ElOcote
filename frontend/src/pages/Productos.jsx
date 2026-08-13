@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { MessageCircle, AlertCircle, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
@@ -38,7 +39,16 @@ const Productos = () => {
   };
 
   return (
-    <div ref={sectionRef} className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Productos de madera | Maderas El Ocote - Torreón</title>
+        <meta
+          name="description"
+          content="Catálogo de madera de pino para construcción, carpintería, industria, tarimas y huacales: triplay, MDF, vigas, tablones y cortes a medida en Torreón, Coahuila."
+        />
+        <link rel="canonical" href="https://www.maderaselocote.com/productos" />
+      </Helmet>
+      <div ref={sectionRef} className="min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -194,6 +204,7 @@ const Productos = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

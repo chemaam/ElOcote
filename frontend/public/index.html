@@ -6,11 +6,13 @@
         <meta name="theme-color" content="#5c3a1e" />
 
         <!-- SEO primario -->
-        <title>Maderas El Ocote | Maderería en Torreón, Coahuila</title>
-        <meta name="description" content="Maderería en Torreón, Coahuila. Venta de madera de pino para construcción, carpintería e industria. Cortes a medida, cepillado y entregas en la Comarca Lagunera. Llámanos: (871) 393-7770." />
-        <meta name="keywords" content="madera Torreón, maderería Torreón, maderas Torreón, venta de madera Torreón, maderería en Torreón, madererías Torreón, maderera Torreón, madera pino Torreón, madera Coahuila, maderería periférico Torreón, maderas Comarca Lagunera, cortes de madera, triplay Torreón, tarimas madera, maderas el ocote" />
+        <!-- title / meta description / canonical are route-specific: set via
+             react-helmet-async in every page component, including Home
+             (see src/pages/*.jsx), and baked into static HTML per-route by
+             scripts/prerender.js. Kept out of this static template entirely
+             so there is exactly one source of truth per route (no duplicate
+             <title>/<meta description>/<link canonical> after prerendering). -->
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.maderaselocote.com/" />
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="/favicon.png" />
@@ -29,7 +31,7 @@
         <meta property="og:site_name" content="Maderas El Ocote" />
 
         <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Maderas El Ocote | Maderería en Torreón, Coahuila" />
         <meta name="twitter:description" content="Venta de madera de pino para construcción, carpintería e industria en Torreón. Cortes a medida y entregas en la Comarca Lagunera." />
         <meta name="twitter:image" content="https://www.maderaselocote.com/og-image.png" />
@@ -45,6 +47,8 @@
           "url": "https://www.maderaselocote.com",
           "telephone": "+528713937770",
           "email": "ventas@maderaselocote.com",
+          "image": "https://www.maderaselocote.com/og-image.png",
+          "logo": "https://www.maderaselocote.com/logo.png",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Calle Carr. a San Pedro 773",
@@ -70,7 +74,10 @@
           ],
           "priceRange": "$$",
           "areaServed": ["Torreón","Gómez Palacio","Lerdo","Comarca Lagunera"],
-          "knowsAbout": ["madera de pino","construcción","carpintería","tarimas","triplay","cortes a medida"]
+          "knowsAbout": ["madera de pino","construcción","carpintería","tarimas","triplay","cortes a medida"],
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=61583987974298"
+          ]
         }
         </script>
 
