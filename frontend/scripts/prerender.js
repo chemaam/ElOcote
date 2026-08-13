@@ -70,7 +70,12 @@ async function main() {
   const pristineIndexHtml = fs.readFileSync(indexPath, 'utf8');
 
   const server = startServer(pristineIndexHtml);
-  const browser = await puppeteer.launch({ headless: 'new' });
+  // --no-sandbox is required in CI containers (e.g. GitHub Actions'
+  // ubuntu-latest runner), which don't support Chrome's user namespace sandbox.
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
 
   try {
     for (const route of ROUTES) {
