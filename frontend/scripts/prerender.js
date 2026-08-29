@@ -98,8 +98,14 @@ async function main() {
       const html = await page.evaluate(() => '<!doctype html>\n' + document.documentElement.outerHTML);
       await page.close();
 
-      const outPath = route === '/' ? indexPath : path.join(BUILD_DIR, route.slice(1), 'index.html');
-      fs.mkdirSync(path.dirname(outPath), { recursive: true });
+      // Written as a flat file (productos.html), not productos/index.html --
+      // GitHub Pages serves a directory's index.html by 301-redirecting the
+      // extensionless path to add a trailing slash (/productos -> /productos/),
+      // which doesn't match the non-trailing-slash canonical/sitemap URLs and
+      // was showing up in Search Console as "Page with redirect". A flat file
+      // is served directly at the extensionless path with no redirect (same
+      // trick already used successfully for public/opinion.html).
+      const outPath = route === '/' ? indexPath : path.join(BUILD_DIR, `${route.slice(1)}.html`);
       fs.writeFileSync(outPath, html);
       console.log(
         `Prerendered ${route} -> ${path.relative(BUILD_DIR, outPath)} (${(html.length / 1024).toFixed(1)} KB)`,
